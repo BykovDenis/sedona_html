@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего! 
+        </title>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="layout clearfix">
+               <!-- Панель навигации -->
+                <nav class="header__navigation">
+                   <ul>
+                       <li><a href="#"></a>Информация</li>
+                       <li><a href="#"></a>Фото и видео</li>
+                       <li><a href="#"></a>Карта штата</li>
+                       <li><a href="#"></a>Гостиницы</li>
+                   </ul>                   
+                </nav>
+            </div>
+                <!-- Баннер как фон в шапке, либо картинка либо бэкграунд -->
+        <div class="header__banner"> 
+            <img src="main-banner.jpg"  alt="СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!">                      
+        </div>            
+        </header>
+        <main>
+           <div class="layout clearfix">
+                <h1>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+                <!-- Перечень преимуществ -->
+                <!-- Первое преимущество -->
+                <section class="main__advantages">
+                    <h2>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</h2>
+                    <section class="main__advatage-1">
+                        <div class="advantage__column__left">
+                            <h3>Настоящий городок</h3>
+                            <div class="advantage__num">- №1 -</div>
+                            <p>Седона не аттракцион для туристов, там течет своя жизнь </p>
+                        </div>
+                        <div class="advantage__column__right">
+                            <img src="advantage_first.jpg" alt="Седона не аттракцион для туристов, там течет своя жизнь">
+                        </div>
+                        <!-- менюшка с предлагаемыми сервисами, каждый из которых оформлен ссылками -->
+                        <nav class="main__services">
+                           <ul>
+                               <li><a href="#">
+                                       <div class="service__hotel">
+                                           <img src="hotel.png" alt="Жилье">
+                                           <h3>Жилье</h3>
+                                           <p>                                           
+                                                Рекомендуем пожить в настоящем мотеле, все как в кино!
+                                           </p>
+                                       </div>
+                                   </a>
+                                </li>
+                               <li><a href="#">
+                                       <div class="service__food">
+                                           <img src="food.png" alt="Еда">
+                                           <h3>Еда</h3>
+                                           <p>Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                                       </div>
+                                   </a>
+                                </li>
+                               <li><a href="#">
+                                       <div class="service__souvenirs">
+                                           <img src="souvenirs.png" alt="Сувениры">
+                                           <h3>Сувениры</h3>
+                                           <p>Не только китайского, но и местного производства!</p>
+                                       </div>
+                                   </a>
+                                </li>
+                           </ul>                            
+                        </nav>
+                    </section>
+                    <!-- Второе преимущество -->
+                    <section class="main__advatage-2">
+                       <div class="advantage__column__left">
+                            <img src="advantage_second.jpg" alt="Да, по нему можно пройти! Если конечно вы осмелитесь">
+                        </div>
+                        <div class="advantage__column__right">
+                            <h3>Там есть мост дьявола</h3>
+                            <div class="advantage__num">- №2 -</div>
+                            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                        </div>                    
+                    </section>    
+                    <!-- список оставшихся преимуществ 3-ч преимуществ -->            
+                    <nav class="main__other_advantages">
+                        <ul>
+                            <li>
+                                <div class="main__advatage-3">
+                                    <h3>НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+                                    <div class="advantage__num">- №3 -</div>
+                                    <p>ВСЕ достопримечательности находятся очень близко</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="main__advatage-4">
+                                    <h3>КРАСИВАЯ ДОРОГА</h3>
+                                    <div class="advantage__num">- №4 -</div>
+                                    <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="main__advatage-5">
+                                    <h3>МАЛО ТУРИСТОВ</h3>
+                                    <div class="advantage__num">- №5 -</div>
+                                    <p>Большинство едет в гранд каньон и толпится там</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="main__search-hotel">
+                    <h2>Заинтересовались?</h2>
+                    <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                    <div>
+                      <!-- форма поиска отелей -->
+                       <form action="index.html">
+                           <h3>Поиск гостиницы в Седоне</h3>
+                           <label for="date_in">Дата заезда</label>
+                           <input type="date" id="date_in">
+                           <label for="date_out">Дата выезда</label>
+                           <input type="date" id="date_out">
+                           <!-- определяем количество людей -->
+                           <div class="search-hotel__people-quantity">
+                               <label for="people-adult">Взрослые</label>
+                               <div class="people-quantity__adult">
+                                   <div>-</div>
+                                   <div><input type="text" id="people-adult" value="2"></div>
+                                   <div>+</div>
+                               </div>
+                               <label for="people-children">Дети</label>
+                              <div class="people-quantity__children">
+                                   <div>-</div>
+                                   <div><input type="text" id="people-children" value="0"></div>
+                                   <div>+</div>
+                               </div>                           
+                           </div>
+                           <input type="submit" value="Найти">
+                       </form>
+
+                    </div>
+                    <div class="main__map">
+                        <img src="map.jpg" alt="Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне">
+                    </div>
+                </section>
+            </div>
+        </main>
+    <footer class="main-footer">
+        <div class="layout clearfix">
+            <div class="main-footer__hashtag">
+                #visitSEDONA
+            </div>
+            <div class="main-footer__social">
+                <i class="twitter-ico"><a href="#">twitter.com</a></i>
+                <i class="fb-ico"><a href="#">fb.com</a></i>
+                <i class="tv-ico"><a href="#">tv</a></i>       
+            </div>
+            <div class="copyright">
+            website by
+            <img src="htmlacademy.png" alt="html academy">    
+            </div>        
+        </div>
+    </footer>              
+    </body>
+</html>
