@@ -9,188 +9,190 @@
         <link href="css/style.css" rel="stylesheet">        
     </head>
     <body>
-    <header class="main-header">
-        <div class="layout clearfix">
-        <img src="img/img_top_sedona.png" width="138" height="70" alt="Sedona">          
-           <!-- Панель навигации -->
-            <nav class="header__navigation">
-               <ul>
-                   <li><a href="#"></a>Информация</li>
-                   <li><a href="#"></a>Фото и видео</li>
-                   <li><a href="#"></a>Карта штата</li>
-                   <li><a href="#"></a>Гостиницы</li>
-               </ul>                   
-            </nav>
-        </div>    
-    </header>   
-    <main>
-        <div class="layout clearfix"> 
-           <!-- форма с фильтрами -->           
-            <form action="inner.html">    
-                  
-            <!-- фильтры по инфраструктуре -->
-               <fieldset class="filter__infrastructure">    
-                <legend>Инфраструктура</legend>
-                <input type="checkbox" id="infrastructure1" checked>
-                <label for="infrastructure1">Бассейн</label>
-                <input type="checkbox" id="infrastructure2">
-                <label for="infrastructure2">Парковка</label>
-                <input type="checkbox" id="infrastructure3">
-                <label for="infrastructure3">wi-fi</label>
-            </fieldset>
-            <!-- тип жилья -->
-            <fieldset class="filter__housing-type">    
-                <legend>Тип жилья</legend>
-                <input type="checkbox" id="housing-type1" checked>
-                <label for="housing-type1">Гостиница</label>
-                <input type="checkbox" id="housing-type2" checked>
-                <label for="housing-type2">Отель</label>
-                <input type="checkbox" id="housing-type3" checked>
-                <label for="housing-type3">Апартаменты</label>
-            </fieldset>
-               <!-- управляющий элемент -->
-                <div class="cost">
-                    Стоимость в сутки (Р)
-                    <table>
-                        <tr>
-                            <td>от 0</td>
-                            <td>до 3000</td>                            
-                        </tr>
-                    </table>
-                    <div class="slider"></div>
-                </div>
-            <input type="submit" value="Показать">
-            </form>             
-            <div class="main__view-control">
-               <!-- результат поиска -->
-                <div class="view-control__found">
-                    Найдено: 
-                    <div class="found__count">3</div>
-                </div>    
-                <!-- сотрировка -->
-                <div class="sort">
-                   <div class="sort__cost--active">По цене</div>
-                   <div class="sort__type">По типу</div>
-                   <div class="sort__rating">По рейтингу</div>
-                   <!-- направление сортировки -->
-                   <div class="sort__rules">                    
-                        <i class="up-ico"></i>                        
-                        <i class="up-down"></i>
-                   </div>
-                </div>
-            </div> 
-            <div class="main__found-housing">
-             <!-- превью с изображениями -->
-                <div class="found-housing__column1">
-                     <div class="found-housing__preview">   
-                        <a href="#">
-                          <img src="img/img_amara_resort_spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
-                        </a>
-                     </div>
-                    <div class="found-housing__preview">
-                        <a href="#">
-                            <img src="img/img_desert_qual_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
-                        </a>
+    <div class="page">
+        <header class="main-header">
+            <div class="layout clearfix">
+            <img src="img/img_top_sedona.png" width="138" height="70" alt="Sedona">          
+               <!-- Панель навигации -->
+                <nav class="header__navigation">
+                   <ul>
+                       <li><a href="#"></a>Информация</li>
+                       <li><a href="#"></a>Фото и видео</li>
+                       <li><a href="#"></a>Карта штата</li>
+                       <li><a href="#"></a>Гостиницы</li>
+                   </ul>                   
+                </nav>
+            </div>    
+        </header>   
+        <main>
+            <div class="layout clearfix"> 
+               <!-- форма с фильтрами -->           
+                <form action="inner.html">    
+
+                <!-- фильтры по инфраструктуре -->
+                   <fieldset class="filter__infrastructure">    
+                    <legend>Инфраструктура</legend>
+                    <input type="checkbox" id="infrastructure1" checked>
+                    <label for="infrastructure1">Бассейн</label>
+                    <input type="checkbox" id="infrastructure2">
+                    <label for="infrastructure2">Парковка</label>
+                    <input type="checkbox" id="infrastructure3">
+                    <label for="infrastructure3">wi-fi</label>
+                </fieldset>
+                <!-- тип жилья -->
+                <fieldset class="filter__housing-type">    
+                    <legend>Тип жилья</legend>
+                    <input type="checkbox" id="housing-type1" checked>
+                    <label for="housing-type1">Гостиница</label>
+                    <input type="checkbox" id="housing-type2" checked>
+                    <label for="housing-type2">Отель</label>
+                    <input type="checkbox" id="housing-type3" checked>
+                    <label for="housing-type3">Апартаменты</label>
+                </fieldset>
+                   <!-- управляющий элемент -->
+                    <div class="cost">
+                        Стоимость в сутки (Р)
+                        <table>
+                            <tr>
+                                <td>от 0</td>
+                                <td>до 3000</td>                            
+                            </tr>
+                        </table>
+                        <div class="slider"></div>
                     </div>
-                    <div class="found-housing__preview">
-                       <a href="#">
-                              <img src="img/img_villas_at_poco_diablo.jpg"  width="135" height="90" alt="Villas at Poco Diablo">
-                       </a>
+                <input type="submit" value="Показать">
+                </form>             
+                <div class="main__view-control">
+                   <!-- результат поиска -->
+                    <div class="view-control__found">
+                        Найдено: 
+                        <div class="found__count">3</div>
+                    </div>    
+                    <!-- сотрировка -->
+                    <div class="sort">
+                       <div class="sort__cost--active">По цене</div>
+                       <div class="sort__type">По типу</div>
+                       <div class="sort__rating">По рейтингу</div>
+                       <!-- направление сортировки -->
+                       <div class="sort__rules">                    
+                            <i class="up-ico"></i>                        
+                            <i class="up-down"></i>
+                       </div>
                     </div>
-                </div>
-            <!-- описание найденного жилья -->
-                <div class="found-housing__column2">
-                    <div class="found-housing__details">
-                       <!-- наименование -->
-                        <a href="#">
-                            <h3>Amara Resort & Spa</h3>
-                        </a>
-                       <!-- тип жилья -->
-                        <div class="housing__item__type">
-                           Гостиница:
-                       </div>
-                       <!-- стоимость проживания -->
-                       <div class="housing__item__cost">
-                           от 3500 р.
-                       </div> 
-                       <div class="housing__item__rules">
-                           <a href="#">Подробнее</a>
-                           <a href="#">Забронировать</a>
-                       </div>                                             
+                </div> 
+                <div class="main__found-housing">
+                 <!-- превью с изображениями -->
+                    <div class="found-housing__column1">
+                         <div class="found-housing__preview">   
+                            <a href="#">
+                              <img src="img/img_amara_resort_spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
+                            </a>
+                         </div>
+                        <div class="found-housing__preview">
+                            <a href="#">
+                                <img src="img/img_desert_qual_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
+                            </a>
+                        </div>
+                        <div class="found-housing__preview">
+                           <a href="#">
+                                  <img src="img/img_villas_at_poco_diablo.jpg"  width="135" height="90" alt="Villas at Poco Diablo">
+                           </a>
+                        </div>
                     </div>
-                    <div class="found-housing__details">
-                       <!-- наименование -->
-                        <a href="#">
-                            <h3>Desert Quail Inn</h3>
-                        </a>
-                       <!-- тип жилья -->
-                        <div class="housing__item__type">
-                           Мотель:
-                       </div>
-                       <!-- стоимость проживания -->
-                       <div class="housing__item__cost">
-                           от 2000 р.
-                       </div> 
-                       <div class="housing__item__rules">
-                           <a href="#">Подробнее</a>
-                           <a href="#">Забронировать</a>
-                       </div>                                             
-                    </div>     
-                    <div class="found-housing__details">
-                       <!-- наименование -->
-                        <a href="#">
-                            <h3>Villas at Poco Diablo</h3>
-                        </a>
-                       <!-- тип жилья -->
-                        <div class="housing__item__type">
-                           Апартаменты:
-                       </div>
-                       <!-- стоимость проживания -->
-                       <div class="housing__item__cost">
-                           от 4000 р.
-                       </div> 
-                       <div class="housing__item__rules">
-                           <a href="#">Подробнее</a>
-                           <a href="#">Забронировать</a>
-                       </div>                                             
-                    </div>                                                   
-                </div>
-                <!-- рейтинг найденного жилья -->
-                <div class="found-housing__column3">   
-                   <!-- рейтинг -->
-                   <div class="housing__item__rating">
-                       <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
-                       <div class="rating__value">рейтинг:8,5</div>
-                   </div>   
-                   <div class="housing__item__rating">
-                       <div class="rating__stars">&#9733;&#9733;</div>
-                       <div class="rating__value">рейтинг:8,9</div>
-                   </div>    
-                   <div class="housing__item__rating">
-                       <div class="rating__stars">&#9733;&#9733;&#9733;</div>
-                       <div class="rating__value">рейтинг:9,2</div>
-                   </div>                                           
-                </div>                            
-            </div>            
-        </div>
-    </main> 
-    <footer class="main-footer">
-        <div class="layout clearfix">
-            <div class="main-footer__hashtag">
-                #visitSEDONA
+                <!-- описание найденного жилья -->
+                    <div class="found-housing__column2">
+                        <div class="found-housing__details">
+                           <!-- наименование -->
+                            <a href="#">
+                                <h3>Amara Resort & Spa</h3>
+                            </a>
+                           <!-- тип жилья -->
+                            <div class="housing__item__type">
+                               Гостиница:
+                           </div>
+                           <!-- стоимость проживания -->
+                           <div class="housing__item__cost">
+                               от 3500 р.
+                           </div> 
+                           <div class="housing__item__rules">
+                               <a href="#">Подробнее</a>
+                               <a href="#">Забронировать</a>
+                           </div>                                             
+                        </div>
+                        <div class="found-housing__details">
+                           <!-- наименование -->
+                            <a href="#">
+                                <h3>Desert Quail Inn</h3>
+                            </a>
+                           <!-- тип жилья -->
+                            <div class="housing__item__type">
+                               Мотель:
+                           </div>
+                           <!-- стоимость проживания -->
+                           <div class="housing__item__cost">
+                               от 2000 р.
+                           </div> 
+                           <div class="housing__item__rules">
+                               <a href="#">Подробнее</a>
+                               <a href="#">Забронировать</a>
+                           </div>                                             
+                        </div>     
+                        <div class="found-housing__details">
+                           <!-- наименование -->
+                            <a href="#">
+                                <h3>Villas at Poco Diablo</h3>
+                            </a>
+                           <!-- тип жилья -->
+                            <div class="housing__item__type">
+                               Апартаменты:
+                           </div>
+                           <!-- стоимость проживания -->
+                           <div class="housing__item__cost">
+                               от 4000 р.
+                           </div> 
+                           <div class="housing__item__rules">
+                               <a href="#">Подробнее</a>
+                               <a href="#">Забронировать</a>
+                           </div>                                             
+                        </div>                                                   
+                    </div>
+                    <!-- рейтинг найденного жилья -->
+                    <div class="found-housing__column3">   
+                       <!-- рейтинг -->
+                       <div class="housing__item__rating">
+                           <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
+                           <div class="rating__value">рейтинг:8,5</div>
+                       </div>   
+                       <div class="housing__item__rating">
+                           <div class="rating__stars">&#9733;&#9733;</div>
+                           <div class="rating__value">рейтинг:8,9</div>
+                       </div>    
+                       <div class="housing__item__rating">
+                           <div class="rating__stars">&#9733;&#9733;&#9733;</div>
+                           <div class="rating__value">рейтинг:9,2</div>
+                       </div>                                           
+                    </div>                            
+                </div>            
             </div>
-            <div class="main-footer__social">
-                <a href="#"><i class="twitter-ico"></i></a>
-                <a href="#"><i class="fb-ico"></i></a>
-                <a href="#"><i class="youtube-ico"></i></a>      
+        </main> 
+        <footer class="main-footer">
+            <div class="layout clearfix">
+                <div class="main-footer__hashtag">
+                    #visitSEDONA
+                </div>
+                <div class="main-footer__social">
+                    <a href="#"><i class="twitter-ico"></i></a>
+                    <a href="#"><i class="fb-ico"></i></a>
+                    <a href="#"><i class="youtube-ico"></i></a>      
+                </div>
+                <div class="copyright">
+                website by
+                    <a href="#">
+                        <img src="img/html_academy.png" width="113" height="39" alt="html academy">    
+                    </a>
+                </div>        
             </div>
-            <div class="copyright">
-            website by
-                <a href="#">
-                    <img src="img/html_academy.png" width="113" height="39" alt="html academy">    
-                </a>
-            </div>        
+        </footer> 
         </div>
-    </footer> 
     </body>
 </html>
