@@ -1,27 +1,18 @@
-body{
-    font-size: 14px;
-    line-height: 1em;    
-    color: #333;
-    font-weight: normal;
-    font-family: 'PT sans Regular',sans-serif;
+body{    
+	font: normal 14px/1em 'PT sans Regular',sans-serif;	
+	color: #333;	
 }
 
 
-h1{
-    font-size: 21px;
-    line-height: 1em;    
-    color: #000;
-    font-weight: bold;
-    font-family: 'PT sans Bold',sans-serif;
-    text-transform: uppercase;
+h1{     
+	font: bold 21px/1em 'PT sans Bold',sans-serif;		
+	color: #000;   
+    text-transform: uppercase;	
 }
 
 
-h2{
-    font-size: 14px;
-    line-height: 1em;
-    color: #333;    
-    font-weight: normal;
-    font-family: 'PT Sans Regular',sans-serif;
+h2{ 
+	font: normal 14px/1em 'PT sans Regular',sans-serif;	
+	color: #333;   
     text-transform: uppercase;
 }
