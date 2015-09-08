@@ -499,29 +499,62 @@ h4 {
 
 .layout-control {
     margin: 0 6%; /* 72px по бокам*/
-    padding: 25.5px 0;
+    padding: 25.5px 0;    
 }
 
 .filter__infrastructure,
 .filter__housing-type {
     float: left;
-    margin-right: 8.5%; /* 113px */
+    margin-right: 10.5%; /* 113px */
     border: 0;  
-    padding: 0;
+    padding: 0;    
 }
 
-.filter__infrastructure input[type="checkbox"],
-.filter__housing-type input[type="checkbox"]{
-    margin-bottom: 24px;
-}
 
 .filter__infrastructure legend,
 .filter__housing-type legend {        
     font: bold 16px/18px  'PT Sans';
     margin-bottom:30px;
-    text-align: right;
+    text-align: left;
 }
 
+
+/* обрабаытваем чекбоксы */
+input[type="checkbox"]{
+    display:none;    
+}
+
+input[type="checkbox"]+label{
+    font: normal 14px/14px 'PT Sans';
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+}
+
+input[type="checkbox"]+label:before{
+
+    display: inline-block;
+    content: '';
+    
+    vertical-align: middle;
+    width:20px;
+    height:20px;
+    padding-right:5px;
+    margin-right: 15px; 
+    
+    background: url('../img/icon_checkbox.png') no-repeat;
+   
+}
+
+input[type="checkbox"]:checked+label:before{
+   background: url('../img/icon_checkbox_checked.png') no-repeat; 
+}
+
+/* -------------------- */
+
+.main__view-control{
+    padding: 31px 0;
+}
 
 .main__view-control div{
     display: inline-block;    
@@ -533,18 +566,26 @@ h4 {
 
 /* сортировка  */
 
-.main__view-control .sort{
+.view-control__sort{
+    width: 84.5%;
     font: normal 12px/12px 'PT Sans';
-    width: 84.3%;
 }
 
-.main__view-control .sort div:first-child{
-    margin-right: 3.3%;
+.main__view-control a{
+    color: black;
+    text-decoration: none;
+}
+
+.main__view-control a:actived{
+    color: #81b3d2;
+}
+
+.view-control__sort div:first-child{
+    margin-right: 4.4%;
 }
 
 .view-control__found {
     font: bold 21px/24px 'PT Sans';
-    padding: 32.5px 0; 
     margin-right:4%;
 }
 
@@ -557,7 +598,7 @@ h4 {
 }
 
 .sort__rules i:first-child{
-    margin-right:11px;
+    margin-right:9px;
 }
 
 .up-icon {
@@ -625,14 +666,14 @@ h4 {
 }
 
 .found-housing__details a{
-    margin:0 !important;
+    margin:0;
 }
 
 
 .found-housing__details h3{
     text-align: left;
     margin-top:0;
-    margin-bottom:18px;
+    margin-bottom:10px;
 }
 
 .housing__item__rating{
@@ -645,7 +686,8 @@ h4 {
 /* контейнер для детальки жилья */
 .layout-found-housing {    
     margin:0;
-    display: inline-block;        
+    display: inline-block; 
+    vertical-align: top;
 }
 
 
@@ -658,9 +700,9 @@ h4 {
 {
     font: normal 14px/14px 'PT Sans';        
     color: #333333;
-    display: inline-block;
-    margin-bottom: 20px;
-    
+    display: inline-block;    
+    vertical-align: top;
+    margin-bottom: 14px;    
 }
 
 .housing__item__cost {
@@ -759,4 +801,20 @@ h4 {
 }
 .catalog-layout {
     padding: 0;
+}
+
+.sort__cost--active a{
+    color: #81b3d2;
+}
+
+.view-control__sort div{
+    margin-right: 30px;
+}
+
+.view-control__sort .sort__type,
+.view-control__sort .sort__rating
+{
+    border-bottom: 1px dotted #81b3d2;
+    padding:2px 0; 
+    opacity: 0.7;
 }
