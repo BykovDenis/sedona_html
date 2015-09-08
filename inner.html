@@ -51,15 +51,25 @@
                             <label for="housing-type3">Апартаменты</label>
                         </fieldset>
                            <!-- управляющий элемент -->
-                            <div class="cost l3">
+                            <div class="cost">
                                 Стоимость в сутки (Р)
-                                <table>
+                                <table class="price-controls">
                                     <tr>
-                                        <td>от 0</td>
-                                        <td>до 3000</td>                            
+                                        <td><label class="min-price">от 0</label></td>
+                                        <td><label class="max-price">до 3000</label></td>                            
                                     </tr>
                                 </table>
-                                <div class="slider"></div>
+                                <div class="slider">
+                                    <div class="range-filter">
+                                    <div class="range-controls">
+                                      <div class="scale">
+                                        <div class="bar" style="margin-left: 0; width: 85%"></div>
+                                      </div>
+                                      <div class="toggle toggle-min"></div>
+                                      <div class="toggle toggle-max"></div>
+                                    </div>
+                                  </div>
+                                </div>
                                 <input type="submit" value="Показать">
                             </div>
                         </form> 
@@ -82,8 +92,8 @@
                         <div class="sort__rating"><a href="#">По рейтингу</a></div>
                        <!-- направление сортировки -->
                        <div class="sort__rules">                    
-                            <i class="up-icon"></i>                        
-                            <i class="down-icon"></i>
+                            <i class="icon-up-dir"></i>                        
+                            <i class="icon-down-dir"></i>
                        </div>
                     </div>
                 </div>
@@ -119,10 +129,10 @@
                                 </div>                                
                              </div>                               
                         </div>
-                            <div class="housing__item__rating">
-                                   <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
-                                   <div class="rating__value">рейтинг:8,5</div>
-                             </div> 
+                        <div class="housing__item__rating">
+                               <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
+                               <div class="rating__value">рейтинг:8,5</div>
+                         </div> 
                         </div>                     
                        <!-- описание найденного жилья -->
                     <div class="found-housing__row">                        
