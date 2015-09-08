@@ -6,13 +6,16 @@
             СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего! 
         </title>
         <!-- подключаем файл со стилями -->
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="page">
             <header class="main-header">
                 <div class="layout clearfix">
-                  <img src="img/img_top_sedona.png" class="logo" width="138" height="70" alt="Sedona">
+                    <a href="index.html">
+                        <img src="img/img_top_sedona.png" class="logo" width="138" height="70" alt="Sedona">
+                    </a>
                    <!-- Панель навигации -->
                     <nav class="header__navigation">
                        <ul class="clearfix">
@@ -26,24 +29,20 @@
 
             <div class="header__banner">  
                 <div class="layout-banner">          
-                    <img src="img/img_welcome.png" width = "188"  height="45" alt="welcome"> 
-                    <img src="img/img_to_the_gorgeous.png" width="256" height="30" alt="to_the_gorgeous">
-                    <img src="img/img_sedona.png" width="458" height="78" alt="Sedona">
-                    <img src="img/because_the_Grand_Canyon_sucks.png" width="296" height="80">
+                    <img src="img/img_sedona.png" width="458" height="352" alt="Sedona">                   
                 </div>
             </div>
             </header>           
-            <main>
-               <div class="clearfix">
-                    <div class="layout-banner ">
+            <main>             
+                    <div class="header-banner">
                         <h1>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
                         <h2>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</h2>
                     </div>
                     <section class="main__advantage-1 clearfix">                                                  
-                        <div class="advantage__column-1 block layout-block" >   
-                                  <h3>Настоящий городок</h3>
-                                    <div class="advantage__num">- №1 -</div>
-                                    <p>Седона не аттракцион для туристов, там течет своя жизнь </p>  
+                        <div class="advantage__column-1 layout-block" >   
+                            <h3>Настоящий <br> городок</h3>
+                            <div class="advantage__num">- №1 -</div>
+                            <p>Седона не аттракцион для туристов, там течет своя жизнь </p>  
                         </div>
                         <div class="advantage__column-2">
                             <img src="img/img_advantage1.jpg" width=100% height=256
@@ -51,58 +50,63 @@
                         </div>
                    </section> 
             <!-- менюшка с предлагаемыми сервисами, каждый из которых оформлен ссылками -->                        
-                 <ul class="main__services clearfix">
-                       <li class="service__housing block layout-block">                                   
-                           <img src="img/icon_home.png" width="75" height="72" alt="Жилье" >
+                 <div class="main__services clearfix">
+                       <div class="service__column layout-block">                                   
+                           <div class="img">
+                               <img src="img/icon_home.png" width="75" height="72" alt="Жилье" >
+                           </div>
                            <h3>Жилье</h3>
                            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>                                   
-                        </li>
-                       <li class="service__food block layout-block">                                   
-                           <img src="img/icon_food.png" height="70" width="74" alt="Еда" >
+                        </div>
+                       <div class="service__column layout-block">
+                          <div class="img">                                   
+                               <img src="img/icon_food.png" height="70" width="74" alt="Еда" >
+                           </div>
                            <h3>Еда</h3>
-                           <p>Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>                                   
-                        </li>
-                       <li class="service__souvenirs block layout-block">                                   
-                           <img src="img/icon_souvenirs.png" alt="Сувениры" width="64" height="70">
+                           <p> Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>                                   
+                        </div>
+                       <div class="service__column layout-block"> 
+                          <div class="img">                                  
+                               <img src="img/icon_souvenirs.png" alt="Сувениры" width="64" height="76">
+                           </div>
                            <h3>Сувениры</h3>
-                           <p>Не только китайского, но и местного производства!</p>                                   
-                        </li>
-                   </ul>
+                           <p>Не только китайского,<br>но и местного  производства!</p>                                   
+                        </div>
+                   </div>
                 <!-- Второе преимущество -->
                     <section class="main__advantage-2 clearfix">
-                           <div class="advantage__column-1">
+                           <div class="advantage__column-1">                               
                                 <img src="img/img_advantage2.jpg" width=100% height=256 
                                    alt="Да, по нему можно пройти! Если конечно вы осмелитесь">                                    
                             </div>
-                            <div class="advantage__column-2 block layout-block">
-                                <h3>Там есть мост дьявола</h3>
+                            <div class="advantage__column-2 layout-block">
+                                <h3>Там есть <br> мост дьявола</h3>
                                 <div class="advantage__num">- №2 -</div>
-                                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                                <p>Да, по нему можно пройти!Если конечно вы осмелитесь</p>
                             </div> 
                     </section> 
                         <!-- список оставшихся преимуществ 3-ч преимуществ --> 
                         <div class="main__other_advantages clearfix">
-                                <div class="block layout-block">                                    
+                                <div class="other_advantage_column layout-block">                                    
                                     <h3>НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
                                     <div class="advantage__num">- №3 -</div>
-                                    <p>ВСЕ достопримечательности находятся очень близко</p>                                    
+                                    <p>ВСЕ достопримечате- <br> льности находятся очень близко</p>                                    
                                 </div>
-                                <div class="block layout-block">                                    
+                                <div class="other_advantage_column layout-block">                                    
                                     <h3>КРАСИВАЯ ДОРОГА</h3>
                                     <div class="advantage__num">- №4 -</div>
                                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>                                    
                                 </div>
-                                <div class="block layout-block">                                    
+                                <div class="other_advantage_column layout-block">                                    
                                     <h3>МАЛО ТУРИСТОВ</h3>
                                     <div class="advantage__num">- №5 -</div>
                                     <p>Большинство едет в гранд каньон и толпится там</p>                                    
                                 </div>                                             
-                       </div>
-                   </div>   
+                       </div>                    
                    <section class="main__search-hotel clearfix">
-                       <div class="layout-banner ">
+                       <div class="layout-form">
                             <h4>Заинтересовались?</h4>
-                            <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                            <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
                        </div>
                        <div class="search-hotel__form">
                        <!-- форма поиска отелей -->
@@ -110,46 +114,50 @@
                                 <h3>Поиск гостиницы в Седоне</h3>
                                 <div class="search-hotel-layout">
                                    <label for="date_in">Дата заезда:</label>
-                                   <input type="date" id="date_in" value="2014-04-28"><br>
+                                   <input class="date" type="text" id="date_in" value="24 апреля 2014"><br>
                                    <label for="date_out">Дата выезда:</label>
-                                   <input type="date" id="date_out" value="2014-07-04"><br>
+                                   <input class="date" type="text" id="date_out" value="4 июля 2014"><br>
                                    <!-- определяем количество людей -->
-                                   <div class="search-hotel__people-quantity">
-                                       <label for="people-adult">Взрослые</label>
-                                       <span class="people-quantity__adult">
-                                           <a href="#">-</a>
-                                           <input type="text" id="people-adult" value="2">
-                                           <a href="#">+</a>
-                                       </span>
-                                       <label for="people-children">Дети</label>
-                                      <span class="people-quantity__children">
-                                           <a href="#">-</a>
-                                           <input type="text" id="people-children" value="0">
-                                           <a href="#">+</a>
-                                       </span>                           
+                                   <div class="search-hotel__people-quantity clearfix">
+                                      <div class="people-quantity__adult people-age">
+                                           <label for="people-adult">Взрослые:</label>
+                                           <span class="people-quantity__controls">
+                                               <input type="button" value="-">
+                                               <input type="text" id="people-age" class="people-age__value" value="2">
+                                               <input type="button" value="+">
+                                           </span>                                     
+                                       </div>
+                                       <div class="people-quantity__child people-age">
+                                            <label for="people-children">Дети:</label>
+                                            <span class="people-quantity__controls">
+                                               <input type="button" value="-">
+                                               <input type="text" id="people-age" class="people-age__value" value="0">
+                                               <input type="button" value="+">
+                                            </span>
+                                       </div>                                      
                                    </div>
                                    <input type="submit" value="Найти">
                                </div>
-                           </form>
-                       </div>
+                           </form>  
+                       </div>                     
                         <div class="main__map">
                             <img src="img/bg_map.jpg" width="1200" height="593"
                             alt="Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне">
-                        </div>                        
+                        </div>                                          
                    </section>    
             </main> 
         <footer class="main__footer absolute">
-            <div class="layout-footer clearfix l2">
-                <div class="main-footer__hashtag l1">
-                    #visitSEDONA
+            <div class="layout-footer clearfix">
+                <div class="main-footer__hashtag">
+                    <h3>#visitSEDONA</h3>
                 </div>
-                <div class="main-footer__social clearfix l1">
+                <div class="main-footer__social clearfix">
                     <a href="#"><i class="twitter-ico"></i></a> 
                     <a href="#"><i class="fb-ico"></i></a>
-                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="youtube-ico"></i></a>
                 </div>
-                <div class="copyright l1">
-                website by
+                <div class="copyright">                    
+                    <span>website by</span>                    
                     <a href="#">
                         <img src="img/html_academy.png" width="113" height="39" alt="html academy">     
                     </a>

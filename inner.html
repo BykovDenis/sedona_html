@@ -6,13 +6,16 @@
             СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего! 
         </title>
         <!-- подключаем файл со стилями -->
+        <link href="css/normalize.css" rel="stylesheet">        
         <link href="css/style.css" rel="stylesheet">        
     </head>
     <body>
     <div class="page">
             <header class="main-header">
                 <div class="layout clearfix">
-                  <img src="img/img_top_sedona.png" class="logo" width="138" height="70" alt="Sedona">
+                    <a href="index.html">
+                        <img src="img/img_top_sedona.png" class="logo" width="138" height="70" alt="Sedona">
+                    </a>
                    <!-- Панель навигации -->
                     <nav class="header__navigation">
                        <ul class="clearfix">
@@ -28,8 +31,8 @@
                   <div class="layout-control clearfix l2">        
                         <form action="inner.html">                  
                         <!-- фильтры по инфраструктуре -->
-                        <fieldset class="filter__infrastructure l3">    
-                            <legend>Инфраструктура</legend>
+                        <fieldset class="filter__infrastructure">    
+                            <legend>Инфраструктура:</legend>
                             <input type="checkbox" id="infrastructure1" checked>
                             <label for="infrastructure1">Бассейн</label><br>
                             <input type="checkbox" id="infrastructure2">
@@ -39,7 +42,7 @@
                         </fieldset>
                         <!-- тип жилья -->
                         <fieldset class="filter__housing-type l1">    
-                            <legend>Тип жилья</legend>
+                            <legend>Тип жилья:</legend>
                             <input type="checkbox" id="housing-type1" checked>
                             <label for="housing-type1">Гостиница</label><br>
                             <input type="checkbox" id="housing-type2" checked>
@@ -64,8 +67,7 @@
                 </div>
             </header>  
         <main>
-            <div class="layout clearfix"> 
-          
+            <div class="layout clearfix">           
                 <div class="main__view-control">
                    <!-- результат поиска -->
                     <div class="view-control__found">
@@ -74,131 +76,142 @@
                     </div>    
                     <!-- сотрировка -->                    
                     <div class="sort">
-                        <div>Сортировка</div>
+                        <div>Сортировка:</div>
                         <div class="sort__cost--active"><a href="#">По цене</a></div>
                         <div class="sort__type"><a href="#">По типу</a></div>
                         <div class="sort__rating"><a href="#">По рейтингу</a></div>
                        <!-- направление сортировки -->
                        <div class="sort__rules">                    
-                            <i class="up-ico"></i>                        
-                            <i class="up-down"></i>
+                            <i class="up-icon"></i>                        
+                            <i class="down-icon"></i>
                        </div>
                     </div>
                 </div>
-            </div>   
-                                        
-                <div class="main__found-housing">
-                 <!-- превью с изображениями -->
-                   
-                    <div class="found-housing__row">
+            </div>  
+            <div class="clearfix">       
+                <div class="main__found-housing">                    
+                 <!-- превью с изображениями -->                   
+                    <div class="found-housing__row">                                                               
                          <div class="found-housing__preview">   
                             <a href="#">
                               <img src="img/img_amara_resort_spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
-                            </a>
-                         </div>
-                         
-                    <div class="found-housing__details">
+                             </a>
+                         </div>  
+                         <div class="found-housing__details">
+                            <div class="layout-found-housing">                        
                            <!-- наименование -->
-                            <a href="#">
-                                <h3>Amara Resort & Spa</h3>
-                            </a>
-                           <!-- тип жилья -->
-                            <div class="housing__item__type">
-                               Гостиница:
-                           </div>
-                           <!-- стоимость проживания -->
-                           <div class="housing__item__cost">
-                               от 3500 р.
-                           </div> 
-                           <div class="housing__item__rules">
-                               <a href="#">Подробнее</a>
-                               <a href="#">Забронировать</a>
-                           </div>    
-                                                                                                                          
+                                <a href="#"><h3>Amara Resort & Spa</h3></a>
+                                <!-- тип жилья -->
+                                <div class="found-housing-column1">
+                                    <div class="housing__item__type">
+                                       Гостиница:
+                                    </div>
+                                    <br>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="found-housing-column2">
+                                <!-- стоимость проживания -->
+                                <div class="housing__item__cost">
+                                   от 3500 р.
+                                </div>
+                                <br>
+                                <a href="#">Забронировать</a>
+                                </div>                                
+                             </div>                               
                         </div>
-                        <div class="housing__item__rating">
-                               <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
-                               <div class="rating__value">рейтинг:8,5</div>
-                         </div> 
-                    </div>                     
+                            <div class="housing__item__rating">
+                                   <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
+                                   <div class="rating__value">рейтинг:8,5</div>
+                             </div> 
+                        </div>                     
                        <!-- описание найденного жилья -->
-                    <div class="found-housing__row">
-                        <div class="found-housing__preview">
+                    <div class="found-housing__row">                        
+                        <div class="found-housing__preview">                           
                             <a href="#">
                                 <img src="img/img_desert_qual_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
                             </a>
                         </div>
-
                         <div class="found-housing__details">
-                           <!-- наименование -->
-                            <a href="#">
-                                <h3>Desert Quail Inn</h3>
-                            </a>
-                           <!-- тип жилья -->
-                            <div class="housing__item__type">
-                               Мотель:
-                           </div>
-                           <!-- стоимость проживания -->
-                           <div class="housing__item__cost">
-                               от 2000 р.
-                           </div> 
-                           <div class="housing__item__rules">
-                               <a href="#">Подробнее</a>
+                          <div class="layout-found-housing">
+                               <!-- наименование -->
+                                <a href="#">
+                                    <h3>Desert Quail Inn</h3>
+                                </a>
+                                <div class="found-housing-column1">
+                                   <!-- тип жилья -->
+                                    <div class="housing__item__type">
+                                       Мотель:
+                                   </div>
+                                   <br>                               
+                                   <a href="#">Подробнее</a>
+                              </div>
+                              <div class="found-housing-column2">
+                               <!-- стоимость проживания -->
+                               <div class="housing__item__cost">
+                                   от 2000 р.
+                               </div>
+                               <br>
                                <a href="#">Забронировать</a>
-                           </div>                                             
-                        </div>     
-                       <div class="housing__item__rating">
-                           <div class="rating__stars">&#9733;&#9733;</div>
-                           <div class="rating__value">рейтинг:8,9</div>
-                       </div>                           
+                              </div>                                
+                            </div>
+                        </div>                             
+                           <div class="housing__item__rating">
+                               <div class="rating__stars">&#9733;&#9733;</div>
+                               <div class="rating__value">рейтинг:8,9</div>
+                           </div>   
                     </div>
                     <!-- рейтинг найденного жилья -->
-                    <div class="found-housing__row">   
+                    <div class="found-housing__row l1">   
                        <!-- рейтинг -->
-                        <div class="found-housing__preview">
+                        <div class="found-housing__preview l2">
                            <a href="#">
                                   <img src="img/img_villas_at_poco_diablo.jpg"  width="135" height="90" alt="Villas at Poco Diablo">
                            </a>
                         </div>                       
-                        <div class="found-housing__details">
-                           <!-- наименование -->
-                            <a href="#">
-                                <h3>Villas at Poco Diablo</h3>
-                            </a>
-                           <!-- тип жилья -->
-                            <div class="housing__item__type">
-                               Апартаменты:
+                        <div class="found-housing__details l1">
+                              <div class="layout-found-housing l2">
+                               <!-- наименование -->
+                                <a href="#">
+                                    <h3>Villas at Poco Diablo</h3>
+                                </a>
+                                <div class="found-housing-column1">
+                                   <!-- тип жилья -->
+                                    <div class="housing__item__type">
+                                       Апартаменты:
+                                   </div>
+                                   <br>
+                                   <a href="#">Подробнее</a>
+                                  </div>
+                                <div class="found-housing-column2"> 
+                                   <!-- стоимость проживания -->
+                                   <div class="housing__item__cost">
+                                       от 4000 р.
+                                   </div> 
+                                    <br>
+                                    <a href="#">Забронировать</a>
+                                    </div>
+                               </div>
                            </div>
-                           <!-- стоимость проживания -->
-                           <div class="housing__item__cost">
-                               от 4000 р.
-                           </div> 
-                           <div class="housing__item__rules">
-                               <a href="#">Подробнее</a>
-                               <a href="#">Забронировать</a>
-                           </div>                                             
-                        </div>
-  
-                       <div class="housing__item__rating">
-                           <div class="rating__stars">&#9733;&#9733;&#9733;</div>
-                           <div class="rating__value">рейтинг:9,2</div>
-                       </div>                        
+                           <div class="housing__item__rating">                              
+                               <div class="rating__stars">&#9733;&#9733;&#9733;</div>
+                               <div class="rating__value">рейтинг:9,2</div>                              
+                           </div>                                                                                                 
                     </div>    
-                </div>                    
-           
+                </div>
+            </div>                                                    
         </main> 
         <footer class="main__footer">
-            <div class="layout-footer clearfix l2">
-                <div class="main-footer__hashtag l1">
-                    #visitSEDONA
+            <div class="layout-footer clearfix">
+                <div class="main-footer__hashtag">
+                    <h3>#visitSEDONA</h3>
                 </div>
-                <div class="main-footer__social clearfix l1">
+                <div class="main-footer__social clearfix">
                     <a href="#"><i class="twitter-ico"></i></a> 
                     <a href="#"><i class="fb-ico"></i></a>
-                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="youtube-ico"></i></a>
                 </div>
-                <div class="copyright l1">
-                website by
+                <div class="copyright">                    
+                    <span>website by</span>                    
                     <a href="#">
                         <img src="img/html_academy.png" width="113" height="39" alt="html academy">     
                     </a>

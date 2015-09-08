@@ -1,19 +1,19 @@
-* { padding: 0; margin: 0; border: 0}
-
 body{
     font: normal 14px/1em 'PT Sans';
     color: #333;    
     width:100%;
     text-transform: uppercase;        
-    overflow-y: scroll;    
+    overflow-y: scroll;
+    background: #f2f2f2;
 }
 
 .page {
     max-width: 1200px;
     min-width: 768px;
+    box-shadow: 1px 0 11px 2px #dbdbdb;
+    background: #ffffff;
     margin: 0 auto;
-    box-shadow: 0 0 0 41px #f2f2f2;  
-    position:relative;
+    position: relative;    
 }
 
 /* контейнер */
@@ -29,6 +29,7 @@ h1{
     font:bold 21px/1.2em 'PT Sans';
     color: #000;   
     text-transform: uppercase;  
+    margin-bottom: 35px;
 }
 
 
@@ -40,8 +41,7 @@ h2{
 }
 
 h3 {    
-    font: normal 21px/1.0em 'PT Sans';
-    font-weight: bold;    
+    font: bold 21px/24px 'PT Sans';
     text-align: center;    
 }
 
@@ -54,35 +54,40 @@ h4 {
 
 /* главное меню */
 
+.header__navigation{
+    position: relative;
+}
+
+.header__navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+.header__navigation ul{
+    margin: 0;
+    padding: 0;
+}
+
 .header__navigation ul li{ /* список 1200-72*2 =  1056   */
     display: block;
-    font-weight:bold;  
-    width: 14%;
-    margin-right: 5%;
-    min-width:99px;
-    padding:20px 0;    
+    font:bold 14px/1em 'PT Sans';  
+    width: 20%;    
+    padding:21px 0; 
+    box-sizing: border-box;
 }
 
-.header__navigation ul li:first-child{
-    float:left;
-    text-align: left;    
-}
-
+.header__navigation ul li:first-child,
 .header__navigation ul li:nth-child(2){
     float:left;
     text-align: left;
+    margin-right:30px;      
 }
 
-
-.header__navigation ul li:nth-child(3){
-    float:right;
-    margin-right: 0;
-    text-align: right;
-}
-
+.header__navigation ul li:nth-child(3),
 .header__navigation ul li:last-child{
-    float:right;    
+    float:right;
     text-align: right;
+    margin-left:30px;   
 }
 
 
@@ -97,23 +102,43 @@ h4 {
 /* картинки в шапке */
 
 .header__banner {
-    background: url(../img/bg_header.jpg) 50% 50%  no-repeat;      
-    height:591px;  
-    
-}
+    background: url(../img/bg_image_mask.png) 50% 100% no-repeat,
+                url(../img/bg_header.jpg) 50% -83px  no-repeat;
+                height: 508px;
+    margin-bottom: 58px;
+}    
 
 .layout-banner {
-    border-top:1px solid transparent;
-    width: 490px; /* по ширине максимальной картинки 458px */
-    margin:0 auto;
-    min-width: 458px;
-    padding-top:63px;
-    text-align: center;    
+    border-top:1px solid transparent;        
+    padding-top:76px;
+    text-align: center;      
 }
 
-.layout-banner img{
+.layout-form{
+    border-top:1px solid transparent;        
+    padding-top:15px;
+    text-align: center; 
+    width: 490px;
+    margin: 0 auto;
+    font: normal 14px/24px 'PT Sans';
+    margin-bottom: 130px;
+}
+
+.layout-form h4{
+    margin-bottom: 30px;
+}
+
+.header-banner{ 
+    margin: 0 auto;    
+    text-align: center;    
+    width: 490px;
+}
+
+
+.layout-banner .img{
     display: block;
-    margin:0 auto;
+    margin:0 auto;  
+    height: 72px;    
 }
 
 
@@ -154,55 +179,37 @@ h4 {
 
 /* основные сервисы которые предлагаются в найденном жилье */
 
-.layout-block
-{
-    margin: 28px 6%; /* 72px от размера контейнера */
+.layout-block{
+    width: 23.1%;    
+    text-align: center;      
+    padding:0 5.1%;
+    font: normal 14px/21px 'PT Sans';
+    position: relative;
+    height: 220px;
 }
 
-.main__services .layout-block,
-.main__other_advantages .layout-block
-{
-    margin: 28px 2%; /* 72px  от размера body*/
+.advantage__column-1.layout-block h3,
+.advantage__column-2.layout-block h3{
+    margin-bottom: 26px;    
 }
 
-.block
-{  
-    text-align: center;
-    width: 29%;  
+.layout-block .advantage__num{
+    margin-bottom: 18px;
 }
 
-
-.block img{
-    margin: 32px 0;
+.main__services {
+    margin:0;
+    padding:0;
+    margin-bottom: 50px;
 }
 
-.block h3{
-    margin-bottom: 28px;
+.main__services>div{
+    float: left;
+    padding-top: 60px;
 }
 
-.block .advantage__num{
-    margin-bottom: 30px;
-}
-
-.block p{
-    font: normal 14px/1.5em 'PT Sans';  
-    padding: 0 2%; /* от всего браузера */
-}
-
-.main__services .block p{
-    padding: 0 6%; /* от контейнера родителя */
-}
-
-
-.main__services li
-{
-    display: block;
-    float:left;       
-}
-
-.main__services li:last-child
-{
-    margin-right: none;
+.main__services div:last-child{
+    margin-right: 0;        
 }
 
 
@@ -214,6 +221,12 @@ h4 {
     background: #81b3d2;
     color:white;  
     text-align: center;
+    position: relative;
+}
+
+.main__advantage-1 .advantage__column-1,
+.main__advantage-2 .advantage__column-2{
+    padding-top: 32px;
 }
 
 /* упорядочивание блоков преимуществ */
@@ -226,31 +239,43 @@ h4 {
 .main__advantage-1 .advantage__column-2,
 .main__advantage-2 .advantage__column-2{
     float: right;
+    width: 66.66%;
 }
 
 .main__advantage-1 .advantage__column-1, 
 .main__advantage-2 .advantage__column-2{
     
-    width: 21%; /* 257px */
+    width: 23.1%; 
 }
 
 .main__advantage-1 .advantage__column-2,
 .main__advantage-2 .advantage__column-1{    
-    width: 67%;    
+    width: 66.66%;        
 }
 
+/* блок остальные преимущества */
 .main__other_advantages{
-    background-color: #eeeeee;
-    padding-bottom: 20px;     
+    background-color: #eeeeee;  
+    position: relative;
+    padding-bottom: 30px;
 }
 
 .main__other_advantages>div{
-    float: left;    
+    float: left;  
+    text-align: center;  
 }
 
 .main__other_advantages>div:last-child{
     margin-right:none;
 }
+
+.other_advantage_column.layout-block h3 {
+    padding: 0 21%;
+    padding-top:23px;    
+    margin-bottom:21px;
+}
+
+
 
 /* оформляем часть главной страницы с формой */
 .main__map{
@@ -262,12 +287,14 @@ h4 {
     position: relative;
 }
 
+/* Оформление формы */
+
 .search-hotel__form {
     position: absolute;
     /* фиксированная ширина формы */
     width: 568px;
-    height: 480px;
-    top:218px;
+    height: 500px;
+    top:185px;
     left:50%;
     transform: translate(-50%,0);
     background: #fff;
@@ -282,93 +309,168 @@ h4 {
 }
 
 .search-hotel-layout {
-    margin: 50px;
+    margin: 52px 55px;    
 }
 
-.search-hotel__form input[type="date"]{
-    width: 346px;
-    border: none;
-    background-color: #f2f2f2;
-    padding:12px 0 12px 20px;
-    margin-bottom: 29px;
-    font: bold 14px/1em 'PT Sans';
-}
-
-.search-hotel__form input[type="text"]{
-    width: 30px;
-    border: none;
-    background-color: #f2f2f2;
-    padding:12px 0 12px 20px;
-    margin-bottom: 29px;
-    font: bold 14px/1em 'PT Sans';
-}
-
-.search-hotel__form input[type="submit"]{
+.search-hotel-layout input[type="submit"]{
     font: bold 21px/1em 'PT Sans';
     padding: 18px 0;
     text-align: center;
     color: white;
     background: #81b3d2; 
     width: 100%;
+    text-transform: uppercase;
 }
 
 
+.people-quantity__adult{
+    float: left;    
+}
 
-.people-quantity__adult,
-.people-quantity__children{
-    text-align: center;    
-    width: 50px;
+.people-quantity__adult {
+    float: left;
+}
+
+.people-quantity__child {
+    float: right;
+}
+
+.people-age__value {
+    background: #f2f2f2;
+    width: 114px;
+}
+
+.people-quantity__controls input[type="button"]{
+    border:0;       
+    background-color: #f2f2f2; 
+    padding: 8px 13px;
     color: #a9a9a9;    
-    background: #f2f2f2;    
-    padding: 12px 0;
+}
+
+.people-age__value {
+    border: none;
+    background-color: #f2f2f2;    
+    text-transform: uppercase;
+    font: bold 14px/26px 'PT Sans'; 
+    text-align: left;
+    padding: 4px 13px;
+    width: 10px;    
+}
+
+/* поля даты */ 
+.search-hotel-layout label{
+    display: inline-block;
+    margin-right: 15px;  
+    width: 96px;
+    text-align: left;
+}
+
+/* поля величина дней */
+.people-quantity__child label{
+    display: inline-block;
+    margin-right: 17px;  
+    width: 40px;
+    text-align: left;
+}
+
+.search-hotel-layout .date{
+    width: 313px;
+    border: none;
+    background-color: #f2f2f2;
+    font: bold 14px/26px 'PT Sans';  
+    text-align: left;
+    padding: 6px 15px;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+}
+
+
+.people-quantity__controls {
+    background: #f2f2f2;
+    padding: 8px 5px;        
+}
+
+.people-quantity__controls::last-child{
+    margin:0 !important;
+}
+
+
+.search-hotel__people-quantity {
+    margin-top: 7px;
+    margin-bottom: 54px;
 }
 
 
 /* оформляем подвал */
 
-
 .main__footer.absolute {
-    position: absolute;      
-    background-color: rgba(249, 251, 249, 0.7);
+    position: absolute;
+    background-color: rgba(249, 251, 249, 0.9);
     z-index: 500;
-    width: 100%;
-    bottom:0;
+    width: 100%;        
+    bottom:0;  
+    
 }
 
-.layout-footer{    
-    position: relative;
-    padding: 0 8%; /* слева 132px справа 102px */  
+.layout-footer{            
+    text-align: center;       
 }
 
-.layout-footer>div{
-    min-height: 40px;
-    margin: 40px 0;
+.layout-footer>div{        
+    display: inline-block;
+    vertical-align: top; 
+    width: 33%;    
+    text-align: center;
 }
 
+.layout-footer>div:last-child{
+    mergin-right: 0;
+    
+}
 
-.main-footer__hashtag {
-    float: left;
+.main-footer__hashtag { 
+    padding: 49.5px 0; 
+}
+
+.main-footer__hashtag h3{
+   margin: 0;
 }
 
 .main-footer__social {
-    position: absolute;
-    left: 40%;  
-    width: 150px;
-    height: 40px;
+    padding: 36px 0;
 }
 
+.main-footer__social i{
+    display: inline-block;
+    width: 46px;
+    height: 48px; 
+    margin-right: 3px;
+}
 
+.main-footer__social i:last-child{
+    margin-right: right;
+}
 
-.copyright {
-    float: right;
+.copyright {  
+    padding: 40.6px 0;    
+    position: relative;
+}
+
+.copyright span{
+    position: absolute;
+    left:35%;
+    top:49%;
+    transform: translate(-50%, -50%);
+}
+
+.copyright a{
+    padding-left: 83px;
 }
 
 
 .twitter-ico {
-    background: url(../img/icon-twitter.png) 50% 50% no-repeat;
-    background-size:40px;
-    min-height: 40px;
-    
+    background: url(../img/icon-twitter.png) no-repeat; 
+    background-size: 46px 48px;
 }
 
 .fb-ico {
@@ -376,42 +478,100 @@ h4 {
     background-size: cover;
 }
 
-.icon-twitter {
-    background: url(../img/icon-twitter.png) 50% 50% no-repeat;
+.youtube-ico {
+    background: url(../img/icon_yootube.png) 50% 50% no-repeat;
     background-size: cover;    
 }
+
+
 
 
 /* Оформление страницы inner.html
  Форма с контроллерами  */
 
 .header__form {
-    background: url(../img/bg_header_catalog.jpg) 50% 50% no-repeat;
+    background: url(../img/bg_header_catalog.jpg) 0 -294px no-repeat;
     border-top: 1px solid transparent;
     color: white;
-    font: normal 14px/1.0em 'PT Sans';    
+    font: normal 14px/1.0em 'PT Sans'; 
+    height: 217px;
 }
 
 .layout-control {
-    margin: 31px 6%; /* 72px по бокам*/
-}
-
-.layout-control fieldset legend{
-    font: bold 16px/1.0em  'PT Sans';
-    margin: 30px 0;
+    margin: 0 6%; /* 72px по бокам*/
+    padding: 25.5px 0;
 }
 
 .filter__infrastructure,
 .filter__housing-type {
     float: left;
-    margin-right: 9%; /* 113px */
+    margin-right: 8.5%; /* 113px */
+    border: 0;  
+    padding: 0;
 }
 
 .filter__infrastructure input[type="checkbox"],
 .filter__housing-type input[type="checkbox"]{
-    margin: 15px 0;
-    content: '2121212';    
+    margin-bottom: 24px;
 }
+
+.filter__infrastructure legend,
+.filter__housing-type legend {        
+    font: bold 16px/18px  'PT Sans';
+    margin-bottom:30px;
+    text-align: right;
+}
+
+
+.main__view-control div{
+    display: inline-block;    
+}
+
+.main__view-control div:last-child{
+    margin-right: 0;     
+}
+
+/* сортировка  */
+
+.main__view-control .sort{
+    font: normal 12px/12px 'PT Sans';
+    width: 84.3%;
+}
+
+.main__view-control .sort div:first-child{
+    margin-right: 3.3%;
+}
+
+.view-control__found {
+    font: bold 21px/24px 'PT Sans';
+    padding: 32.5px 0; 
+    margin-right:4%;
+}
+
+.sort__rules {
+    float: right;
+}
+
+.sort__rules i{
+    display: inline-block;
+}
+
+.sort__rules i:first-child{
+    margin-right:11px;
+}
+
+.up-icon {
+    background: url(../img/icon_up.png) no-repeat;
+    width: 11px;
+    height: 10px;
+}
+
+.down-icon {
+    background: url(../img/icon_down.png) no-repeat;
+    width: 11px;
+    height: 10px;
+}
+/* ----------  */
 
 
 .header__form .cost {
@@ -422,55 +582,148 @@ h4 {
 
 .header__form .cost input[type="submit"] {
     text-align: center;
-    padding: 5px;    
+    padding: 5px;        
+    padding: 5px;        
 }
 
 /* Обрабатываем каталог */
 
-.view-control__found {
-    font: bold 21px/1em 'PS Sans';
+/* табличная часть рейтинга */
+.main__found-housing {
+    padding: 15px 0;
+    margin-bottom: 50px;             
 }
 
-.main__view-control div{
-    display: inline-block;
-    margin-right: 30px;
+.main__found-housing a{
+    color: black;
+    text-decoration: none;
 }
 
-.main__view-control div:last-child{
-    margin-right: 0;     
+.found-housing__row {       
+    position: relative; 
+    display: table;
 }
 
 .found-housing__preview,
-.found-housing__details{
-   display: inline-block;
-   margin-right: 30px;
+.found-housing__details,
+.housing__item__rating{
+   display : table-cell; 
+   vertical-align : middle;
+   text-align : left;    
+   padding: 30px 6%;
+   border-top:  1px solid #e5e5e5;
 }
 
-.housing__item__rating{    
-    float: right;   
+.found-housing__preview{
+   width : 11.25%;  
+   text-align: left;
+   padding-right: 1.33%;
+}
+
+.found-housing__details{
+    width: 78.07%;
+}
+
+.found-housing__details a{
+    margin:0 !important;
+}
+
+
+.found-housing__details h3{
+    text-align: left;
+    margin-top:0;
+    margin-bottom:18px;
+}
+
+.housing__item__rating{
+    width: 9.33%;   
+    text-align: right;
+    position: relative;     
+}
+
+
+/* контейнер для детальки жилья */
+.layout-found-housing {    
+    margin:0;
+    display: inline-block;        
+}
+
+
+.housing__item__type {
+    margin-right: 39px;    
+}
+
+.housing__item__type,
+.housing__item__cost
+{
+    font: normal 14px/14px 'PT Sans';        
+    color: #333333;
+    display: inline-block;
+    margin-bottom: 20px;
     
 }
 
-.found-housing__details h3{
-    margin-bottom: 18px;
+.housing__item__cost {
+    margin-right:0;    
 }
 
 
-.found-housing__row  {
-    border-top: 1px solid #e5e5e5;
-    padding: 31px 0;
+.housing__item__rules a{
+    padding: 6.5px 17px;
+    color: white;
+    display: inline-block;
 }
 
-.main__found-housing {
-    padding: 35px 6%;
-    margin-bottom: 50px;
+.found-housing-column1, 
+.found-housing-column2{
+    display: inline-block;
+}
+
+.found-housing-column1{
+    width: 111px;
+}
+
+.found-housing-column2{
+    margin-right:0;    
+}
+
+.found-housing-column1 a, 
+.found-housing-column2 a{
+    padding: 6.5px 17px;
+    color: white;
+    display: inline-block;
 }
 
 
+.found-housing-column1 a{
+    background: #81b3d2;    
+}
 
+.found-housing-column2 a{
+    background: #766357;
+    margin-right:0;
+}
 
+.housing__item__rating .rating__stars {
+    position: absolute;
+    top:30px;
+    right:0;
+    font: normal 19px/21px 'PT Sans';
+    color: #81b3d2;
+    marging-bottom: 47px;
+    
+}
 
-
+.housing__item__rating .rating__value {
+    position: absolute;
+    bottom:30px;
+    right:0;  
+    font: normal 14px/14px 'PT Sans';
+    color: #666666;
+    padding: 6.5px 17px;
+    background: #f2f2f2;
+    
+}
 
 
 
@@ -504,5 +757,6 @@ h4 {
 .l6{
   outline: 2px dashed #0ef455;  
 }
-
-
+.catalog-layout {
+    padding: 0;
+}
