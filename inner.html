@@ -26,12 +26,12 @@
                        </ul>                   
                     </nav>
                 </div>
-              <div class="header__form">
+              <div class="header__form l2">
                <!-- форма с фильтрами -->   
-                  <div class="layout-control clearfix">        
+                  <div class="layout-control clearfix l1">        
                         <form action="inner.html">                  
                         <!-- фильтры по инфраструктуре -->
-                        <fieldset class="filter__infrastructure">    
+                        <fieldset class="filter__infrastructure l3">    
                             <legend>Инфраструктура:</legend>
                             <input type="checkbox" id="infrastructure1" checked>
                             <label for="infrastructure1">Бассейн</label><br>
@@ -41,7 +41,7 @@
                             <label for="infrastructure3">wi-fi</label>
                         </fieldset>
                         <!-- тип жилья -->
-                        <fieldset class="filter__housing-type">    
+                        <fieldset class="filter__housing-type l3">    
                             <legend>Тип жилья:</legend>
                             <input type="checkbox" id="housing-type1" checked>
                             <label for="housing-type1">Гостиница</label><br>
@@ -53,12 +53,10 @@
                            <!-- управляющий элемент -->
                             <div class="cost">
                                 Стоимость в сутки (Р)
-                                <table class="price-controls">
-                                    <tr>
-                                        <td><label class="min-price">от 0</label></td>
-                                        <td><label class="max-price">до 3000</label></td>                            
-                                    </tr>
-                                </table>
+                                <div class="price-controls clearfix">                                    
+                                        <div class="price-controls-column1" ><label class="min-price">от 0</label></div>
+                                        <div class="price-controls-column2"><label class="max-price">до 3000</label></div>
+                                </div>
                                 <div class="slider">
                                     <div class="range-filter">
                                     <div class="range-controls">
@@ -77,12 +75,11 @@
                 </div>
             </header>  
         <main>
-            <div class="layout clearfix">           
-                <div class="main__view-control">
+            <div class="layout clearfix l2">           
+                <div class="main__view-control l1">
                    <!-- результат поиска -->
-                    <div class="view-control__found">
-                        Найдено: 
-                        <span class="found__count">3</span>
+                    <div class="view-control__found l2">
+                        Найдено: <span class="found__count">3</span>
                     </div>    
                     <!-- сотрировка -->                    
                     <div class="view-control__sort">
