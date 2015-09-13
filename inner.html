@@ -26,12 +26,12 @@
                        </ul>                   
                     </nav>
                 </div>
-              <div class="header__form l2">
+              <div class="header__form">
                <!-- форма с фильтрами -->   
-                  <div class="layout-control clearfix l1">        
+                  <div class="layout-control clearfix">        
                         <form action="inner.html">                  
                         <!-- фильтры по инфраструктуре -->
-                        <fieldset class="filter__infrastructure l3">    
+                        <fieldset class="filter__infrastructure">    
                             <legend>Инфраструктура:</legend>
                             <input type="checkbox" id="infrastructure1" checked>
                             <label for="infrastructure1">Бассейн</label><br>
@@ -41,7 +41,7 @@
                             <label for="infrastructure3">wi-fi</label>
                         </fieldset>
                         <!-- тип жилья -->
-                        <fieldset class="filter__housing-type l3">    
+                        <fieldset class="filter__housing-type">    
                             <legend>Тип жилья:</legend>
                             <input type="checkbox" id="housing-type1" checked>
                             <label for="housing-type1">Гостиница</label><br>
@@ -52,10 +52,10 @@
                         </fieldset>
                            <!-- управляющий элемент -->
                             <div class="cost">
-                                Стоимость в сутки (Р)
+                                Стоимость в сутки (Р):
                                 <div class="price-controls clearfix">                                    
-                                        <div class="price-controls-column1" ><label class="min-price">от 0</label></div>
-                                        <div class="price-controls-column2"><label class="max-price">до 3000</label></div>
+                                    <div class="price-controls-column1" ><label class="min-price">от 0</label></div>
+                                    <div class="price-controls-column2"><label class="max-price">до 3000</label></div>
                                 </div>
                                 <div class="slider">
                                     <div class="range-filter">
@@ -75,24 +75,24 @@
                 </div>
             </header>  
         <main>
-            <div class="layout clearfix l2">           
-                <div class="main__view-control l1">
+            <div class="layout">           
+                <div class="main__view-control  clearfix">
                    <!-- результат поиска -->
-                    <div class="view-control__found l2">
+                    <div class="view-control__found">
                         Найдено: <span class="found__count">3</span>
-                    </div>    
+                    </div>                         
                     <!-- сотрировка -->                    
                     <div class="view-control__sort">
                         <div>Сортировка:</div>
-                        <div class="sort__cost--active"><a href="#">По цене</a></div>
+                        <div class="sort__cost"><a href="#">По цене</a></div>
                         <div class="sort__type"><a href="#">По типу</a></div>
                         <div class="sort__rating"><a href="#">По рейтингу</a></div>
-                       <!-- направление сортировки -->
-                       <div class="sort__rules">                    
-                            <i class="icon-up-dir"></i>                        
-                            <i class="icon-down-dir"></i>
-                       </div>
-                    </div>
+                    </div>                                                                       
+                   <!-- направление сортировки -->
+                   <div class="sort__rules">                    
+                       <a href="#"><i class="icon-up-dir"></i></a>
+                       <a href="#"><i class="icon-down-dir"></i></a>
+                   </div>                    
                 </div>
             </div>  
             <div class="clearfix">       
@@ -127,7 +127,7 @@
                              </div>                               
                         </div>
                         <div class="housing__item__rating">
-                               <div class="rating__stars">&#9733;&#9733;&#9733;&#9733;</div>
+                               <div class="rating__stars">&#9733;&nbsp;&#9733;&nbsp;&#9733;&nbsp;&#9733;</div>
                                <div class="rating__value">рейтинг:8,5</div>
                          </div> 
                         </div>                     
@@ -163,20 +163,20 @@
                             </div>
                         </div>                             
                            <div class="housing__item__rating">
-                               <div class="rating__stars">&#9733;&#9733;</div>
+                               <div class="rating__stars">&#9733;&nbsp;&#9733;</div>
                                <div class="rating__value">рейтинг:8,9</div>
                            </div>   
                     </div>
                     <!-- рейтинг найденного жилья -->
-                    <div class="found-housing__row l1">   
+                    <div class="found-housing__row">   
                        <!-- рейтинг -->
-                        <div class="found-housing__preview l2">
+                        <div class="found-housing__preview">
                            <a href="#">
                                   <img src="img/img_villas_at_poco_diablo.jpg"  width="135" height="90" alt="Villas at Poco Diablo">
                            </a>
                         </div>                       
-                        <div class="found-housing__details l1">
-                              <div class="layout-found-housing l2">
+                        <div class="found-housing__details">
+                              <div class="layout-found-housing">
                                <!-- наименование -->
                                 <a href="#">
                                     <h3>Villas at Poco Diablo</h3>
@@ -200,7 +200,7 @@
                                </div>
                            </div>
                            <div class="housing__item__rating">                              
-                               <div class="rating__stars">&#9733;&#9733;&#9733;</div>
+                               <div class="rating__stars">&#9733;&nbsp;&#9733;&nbsp;&#9733;</div>
                                <div class="rating__value">рейтинг:9,2</div>                              
                            </div>                                                                                                 
                     </div>    
@@ -213,18 +213,19 @@
                     <h3>#visitSEDONA</h3>
                 </div>
                 <div class="main-footer__social clearfix">
-                    <a href="#"><i class="twitter-ico"></i></a> 
-                    <a href="#"><i class="fb-ico"></i></a>
-                    <a href="#"><i class="youtube-ico"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a> 
+                    <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-youtube"></i></a>
                 </div>
                 <div class="copyright">                    
                     <span>website by</span>                    
                     <a href="#">
-                        <img src="img/html_academy.png" width="113" height="39" alt="html academy">     
+                        <div class="logo_htmlacademy">                               
+                        </div>
                     </a>
                 </div>        
             </div>
-        </footer>  
+        </footer>    
         </div>
     </body>
 </html>

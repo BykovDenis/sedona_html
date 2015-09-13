@@ -36,9 +36,7 @@
   speak: none;
  
   display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: 0.2em;
+  text-decoration: inherit;  
   text-align: center;
   /* opacity: .8; */
  
@@ -164,6 +162,14 @@ h4 {
     margin-left:30px;   
 }
 
+.header__navigation a:hover{
+    color: #81b3d2;
+}
+
+.header__navigation a:active{
+    color: black;
+    opacity: 0.3;
+}
 
 /* распорка */
 
@@ -247,10 +253,6 @@ h4 {
     transform: translate(-50%,0);
 }
 
-.main-header {
-    
-}
-
 /* основные сервисы которые предлагаются в найденном жилье */
 
 .layout-block{
@@ -260,11 +262,6 @@ h4 {
     font: normal 14px/21px 'PT Sans';
     position: relative;
     height: 220px;
-}
-
-.advantage__column-1.layout-block h3,
-.advantage__column-2.layout-block h3{
-    margin-bottom: 26px;    
 }
 
 .layout-block .advantage__num{
@@ -343,6 +340,18 @@ h4 {
     margin-right:none;
 }
 
+.advantage__column-1.layout-block h3,
+.advantage__column-2.layout-block h3{
+    margin-bottom: 26px;    
+}
+
+.main__advantage-1 .advantage__column-2 img,
+.main__advantage-2 .advantage__column-1 img
+{
+    float: left;    
+    clear: both;    
+}
+
 .other_advantage_column.layout-block h3 {
     padding: 0 21%;
     padding-top:23px;    
@@ -355,6 +364,7 @@ h4 {
 .main__map{
     background-image: url(../img/bg_map.jpg) 50% 50% no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .main__search-hotel {
@@ -383,7 +393,8 @@ h4 {
 }
 
 .search-hotel-layout {
-    margin: 52px 55px;    
+    margin: 52px 55px;  
+    position: relative;
 }
 
 .search-hotel-layout input[type="submit"]{
@@ -394,8 +405,18 @@ h4 {
     background: #81b3d2; 
     width: 100%;
     text-transform: uppercase;
+    border: 0;
 }
 
+.search-hotel-layout input[type="submit"]:hover{
+    background-color: #669ec0;
+}
+
+.search-hotel-layout input[type="submit"]:active{
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
+    
+}
 
 .people-quantity__adult{
     float: left;    
@@ -419,6 +440,18 @@ h4 {
     background-color: #f2f2f2; 
     padding: 8px 13px;
     color: #a9a9a9;    
+}
+
+.people-quantity__controls input[type="button"]:hover{
+    color: black;
+}
+
+.people-quantity__controls input[type="button"]:active{
+    color: #81b3d2; 
+}
+
+.people-quantity__controls input[type="button"]:focus{
+    outline-color: #e5e5e5;
 }
 
 .people-age__value {
@@ -447,22 +480,36 @@ h4 {
     text-align: left;
 }
 
-.search-hotel-layout .date{
+.search-hotel-layout .date{    
     width: 313px;
-    border: none;
-    background-color: #f2f2f2;
+    border: none;    
     font: bold 14px/26px 'PT Sans';  
     text-align: left;
     padding: 6px 15px;
     text-transform: uppercase;
-    margin-bottom: 29px;
+    margin-bottom: 29px;                
+    background: #f2f2f2 url('../img/sprite.png') 242px -8px no-repeat;     
 }
 
+.search-hotel-layout .date:hover{    
+    background: #ebebeb url('../img/sprite.png') 242px -65px no-repeat;
+}
+
+.search-hotel-layout .date:active{
+    background: #ebebeb url('../img/sprite.png') 242px -122px no-repeat;;      
+}
+
+
+.search-hotel-layout .date:focus{
+    background-color: #fff;     
+    outline-color: #e5e5e5;
+}
 
 .people-quantity__controls {
     background: #f2f2f2;
     padding: 8px 5px;        
 }
+
 
 .people-quantity__controls::last-child{
     margin:0 !important;
@@ -512,6 +559,33 @@ h4 {
 
 .main-footer__social {
     padding: 36px 0;
+    font: normal 19px/20px 'symbol-sedona';
+}
+
+.main-footer__social>i
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-footer__social i
+{
+    width: 47px;
+    height: 48px;    
+    outline: inline 3px 0 0 5px red; /* #8ab8d5; */
+    background-color: #81b3d2;    
+    color: white;
+    box-sizing: border-box;
+    padding:14.5px 0;    
+}
+
+.main-footer__social i:hover{
+    background-color: #669ec0;    
+}
+
+.main-footer__social i:active{
+    background-color: #5496bd; 
+    color: rgba(255,255,255,0.3);
 }
 
 .main-footer__social i{
@@ -542,24 +616,6 @@ h4 {
 }
 
 
-.twitter-ico {
-    background: url(../img/icon-twitter.png) no-repeat; 
-    background-size: 46px 48px;
-}
-
-.fb-ico {
-    background: url(../img/icon-facebook.png) 50% 50% no-repeat;
-    background-size: cover;
-}
-
-.youtube-ico {
-    background: url(../img/icon_yootube.png) 50% 50% no-repeat;
-    background-size: cover;    
-}
-
-
-
-
 /* Оформление страницы inner.html
  Форма с контроллерами  */
 
@@ -573,7 +629,7 @@ h4 {
 
 .layout-control {
     margin: 0 6%; /* 72px по бокам*/
-    padding: 25.5px 0;  
+    padding-top:25px;
     position: relative;
 }
 
@@ -585,12 +641,14 @@ h4 {
 }
 
 .filter__infrastructure{
-    width: 15.5%; /* 113px */
-    margin-right: 8%;    
+    width: 15.5%;
+    margin-right: 5%;
+    padding-right: 1%;   
 }
 
 .filter__housing-type{
     width: 27.27%;
+    padding-left:2.4%;
 }
 
 
@@ -604,43 +662,48 @@ h4 {
 
 
 /* обрабаытваем чекбоксы */
-input[type="checkbox"]{
+
+.layout-control input[type="checkbox"]{
     display:none;    
 }
 
-input[type="checkbox"]+label{
+.layout-control input[type="checkbox"]+label{
     font: normal 14px/14px 'PT Sans';
     margin-bottom: 10px;
     display: block;
     position: relative;
+    color: #b5b5b5;
 }
 
-input[type="checkbox"]+label:before{
-
+.layout-control input[type="checkbox"]+label:before{
     display: inline-block;
     content: '';
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;    
-    padding-right: 6px;
-    margin-right: 15px;     
-    background: url('../img/icon_checkbox.png') no-repeat;  
-}
-
-input[type="checkbox"]:checked+label:before{
-   background: url('../img/icon_checkbox_checked.png') no-repeat; 
     width: 26px;
     height: 22px;
+    vertical-align: middle;
+    margin-right: 15px;     
+    background: url('../img/sprite.png') -72px -271px no-repeat;   
+}
+
+.layout-control input[type="checkbox"]:checked+label:before{    
+   background: url('../img/sprite.png') -72px -241px no-repeat;   
+}
+
+
+.layout-control input[type="checkbox"]+label:hover:before{    
+    background: url('../img/sprite.png') -72px -204px no-repeat;   
+    color: #fff;
+}
+
+.layout-control input[type="checkbox"]:checked+label:hover:before{
+    background: url('../img/sprite.png') -72px -172px no-repeat;
 }
 
 /* -------------------- */
 
 .main__view-control{
     padding: 31px 0;
-}
-
-.main__view-control div{
-    display: inline-block;    
+    width: 100%;
 }
 
 .main__view-control div:last-child{
@@ -648,10 +711,6 @@ input[type="checkbox"]:checked+label:before{
 }
 
 /* сортировка  */
-
-.view-control__sort{
-    font: normal 12px/12px 'PT Sans';
-}
 
 .main__view-control a{
     color: black;
@@ -662,52 +721,132 @@ input[type="checkbox"]:checked+label:before{
     color: #81b3d2;
 }
 
-.view-control__sort div:first-child{
-    margin-right: 4.4%;
-}
-
 .view-control__found {
    font: bold 21px/24px 'PT Sans';  
-    margin-right:4.6%;
-}
-
-.sort__rules {
-    float: right;
+    margin-right:45px;    
+    float: left;
 }
 
 
-.icon-up-dir {   
+.icon-up-dir,
+.icon-down-dir{   
     font: normal 23px/20px 'symbols-sedona';
     color: #cccccc;
 }
 
-.icon-down-dir {
+.icon-up-dir:hover,
+.icon-down-dir:hover {
+    font: normal 23px/20px 'symbols-sedona';
+    color: black;
+}
+
+.icon-up-dir:active,
+.icon-down-dir:active {
     font: normal 23px/20px 'symbols-sedona';
     color: #81b3d2;
 }
+
+
+
+
 /* ----------  */
 
 
 .header__form .cost {
     float: right;   
     text-align: left;
-    font: normal 14px/14px 'PT Sans';
+    font: normal 16px/18px 'PT Sans';
     position: relative;
     width: 30%;
 }
 
 .cost input[type="submit"]{
     width:136px;
-    padding: 5px 0;
+    padding: 3px 0;
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 2px;
     text-transform: uppercase;
     font: normal 14px/24px 'PT Sans';
     background: none;  
-    margin: 0 0 0 7.1%; /* позиционирование локальное */
+    display: block;
+    margin: 0 auto;
     
 }
 
+/* range фильтр */
+
+.range-filter {
+  width: 100%; /*  width: 26.2%; */ 
+  margin: 0.4% auto; /* для демонстрации */
+}
+
+.range-controls {
+  position: relative;
+  height: 33px;
+  padding-top: 10px;
+  padding-right: 1.6%;
+  padding-left: 1.6%;
+  
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+
+.range-controls .bar {
+  width: 22%;
+  height: 2px;
+  background: #fff;
+}
+
+
+.range-controls .toggle {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 70%;
+}
+
+
+.range-controls .toggle-min:hover,
+.range-controls .toggle-max:hover{
+    background-color: #1c4f80; 
+}
+
+
+
+.price-controls-column1 {
+    float: left; 
+    width: 49%;
+    border-right: 2px solid white;    
+}
+
+.price-controls-column2 {
+    float: right;   
+    width: 50%;
+}
+
+.min-price,
+.max-price{
+    width: 100%;
+    display: inline-block;
+}
 
 
 /* Обрабатываем каталог */
@@ -721,8 +860,7 @@ input[type="checkbox"]:checked+label:before{
 }
 
 .found-housing__row { 
-    display: table;
-    
+    display: table;    
 }
 
 .found-housing__preview,
@@ -733,23 +871,19 @@ input[type="checkbox"]:checked+label:before{
    text-align : left;    
    padding: 30px 0;
    border-top:  1px solid #e5e5e5;    
-   box-sizing: border-box;
+   box-sizing: border-box;    
 }
 
 .found-housing__preview{
    width: 11%;        
-   padding-left:6%;
-   padding-right: 2.5%;
+   padding-left:6%;   
 }
 
 
 .found-housing__details{
-    width: 63.5%;      
-}
-
-.housing__item__rating{
-   width: 11%;
-   padding-left: 6%;
+    width: 48.3%;   
+    padding-left: 1.8%;
+    padding-top: 18px;
 }
 
 
@@ -764,12 +898,69 @@ input[type="checkbox"]:checked+label:before{
     margin-bottom:10px;
 }
 
-.housing__item__rating{
-   /* width: 9.33%;   */
-    text-align: right;
-    position: relative;     
+.housing__item__rating{   
+    text-align: right;  
+    width: 26%;
+    position: relative;    
 }
 
+
+.sort__cost--active a{
+    color: #81b3d2;
+}
+
+
+.view-control__sort{
+    font: normal 12px/12px 'PT Sans';
+    float: left;
+    padding: 3px 0;
+}
+
+.sort__rules {
+    float: right;
+    width: 36px;
+}
+
+.sort__rules i{
+    text-align: right;
+}
+
+.view-control__sort>div,
+.sort__rules i{
+    display: inline-block;
+    margin:0;
+}
+
+.view-control__sort div:first-child{
+    color: #000;
+}
+
+.view-control__sort div{
+    margin-right: 31px;
+}
+
+.view-control__sort .sort__type a,
+.view-control__sort .sort__rating a,
+.view-control__sort .sort__cost a
+{
+    border-bottom: 1px dotted #81b3d2;
+    padding:2px 0; 
+    color: rgba(0,0,0,0.3);
+}
+
+.view-control__sort .sort__type a:hover,
+.view-control__sort .sort__rating a:hover,
+.view-control__sort .sort__cost a:hover{
+    color: #81b3d2;
+}
+
+.view-control__sort .sort__type a:active,
+.view-control__sort .sort__rating a:active,
+.view-control__sort .sort__cost a:active{
+    color: black;
+    border:none;
+    opacity: 1;
+}
 
 /* контейнер для детальки жилья */
 .layout-found-housing {    
@@ -779,9 +970,17 @@ input[type="checkbox"]:checked+label:before{
     width: 100%;
 }
 
+.layout-found-housing h3{
+    color: black;
+}
 
-.housing__item__type {
-    margin-right: 39px;    
+.layout-found-housing h3:hover{
+    color: #81b3d2;
+}
+
+.layout-found-housing h3:active{
+    color: black;
+    opacity: 0.3;
 }
 
 .housing__item__type,
@@ -791,7 +990,7 @@ input[type="checkbox"]:checked+label:before{
     color: #333333;
     display: inline-block;    
     vertical-align: top;
-    margin-bottom: 14px;    
+    margin-bottom: 20px;    
 }
 
 .housing__item__cost {
@@ -830,27 +1029,49 @@ input[type="checkbox"]:checked+label:before{
     background: #81b3d2;    
 }
 
+.found-housing-column1 a:hover{
+    background: #669ec0;     
+}
+
+.found-housing-column1 a:active{
+    background: #5496bd;    
+    color: rgba(255,255,255,0.3);
+}
+
 .found-housing-column2 a{
     background: #766357;
     margin-right:0;
 }
 
+.found-housing-column2 a:hover{
+    background: #604e43;
+}
+
+.found-housing-column2 a:active{
+    background: #503e33;    
+    color: rgba(255,255,255,0.3);    
+}
+
+
+.housing__item__type {
+    margin-right: 39px;    
+}
 
 
 .housing__item__rating .rating__stars {
     position: absolute;
     top:30px;
-    right:0;
+    right:23%;
     font: normal 19px/21px 'PT Sans';
     color: #81b3d2;
     marging-bottom: 47px;
-    
+    font: normal 19px/21px 'symbols-sedona';    
 }
 
 .housing__item__rating .rating__value {
     position: absolute;
     bottom:30px;
-    right:0;  
+    right:23%;  
     font: normal 14px/14px 'PT Sans';
     color: #666666;
     padding: 6.5px 17px;
@@ -858,68 +1079,18 @@ input[type="checkbox"]:checked+label:before{
     
 }
 
-/* range фильтр */
-
-.range-filter {
-  width: 29.2%; /*  width: 26.2%; */ width: 315px;
-  margin: 0.4% auto; /* для демонстрации */
-}
-
-.range-controls {
-  position: relative;
-  height: 41px;
-  padding-top: 39px;
-  padding-right: 1.6%;
-  padding-left: 1.6%;
-  
-}
-
-.range-controls .scale {
-  height: 2px;
-  background: #d7dcde;
-}
-
-
-.range-controls .bar {
-  width: 22%;
-  height: 2px;
-  background: #fff;
-}
-
-
-.range-controls .toggle {
-  position: absolute;
-  top: 30px;
-  left: 0px;
-  width: 4px;
-  height: 4px;
-  cursor: pointer;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  background: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-}
-
-.range-controls .toggle-min {
-  left: 0;
-}
-
-.range-controls .toggle-max {
-  left: 252px;
-}
 
 .price-controls {
     font-size: 0;
     border: 2px solid white;
     text-align: center;
     width: 100%;
-    padding: 7px 0;
+    padding: 9px 0;
     margin-top: 14px;
+    margin-bottom: 10px;    
+    font: normal 14px/14px 'PT Sans';
 }
 
-.price-controls td{
-
-}
 
 .price-controls td{
     padding:8px 0;
@@ -928,16 +1099,6 @@ input[type="checkbox"]:checked+label:before{
 
 .price-controls td:first-child{
     border-right: 2px solid white;
-}
-
-.price-controls label {
-  font-size: 16px;
-  display: inline-block;
-  width: 50%;
-}
-
-.max-price {
-  text-align: right;
 }
 
 .price-controls input {
@@ -957,28 +1118,6 @@ input[type="checkbox"]:checked+label:before{
 .catalog-layout {
     padding: 0;
 }
-
-.sort__cost--active a{
-    color: #81b3d2;
-}
-
-.view-control__sort div{
-    margin-right: 30px;
-}
-
-.view-control__sort .sort__type,
-.view-control__sort .sort__rating
-{
-    border-bottom: 1px dotted #81b3d2;
-    padding:2px 0; 
-    opacity: 0.7;
-}
-
-.slider {
-    position: relative;
-}
-
-
 
 /* визуальные отображения объектов */
 
@@ -1012,13 +1151,17 @@ input[type="checkbox"]:checked+label:before{
 }
 
 
-.price-controls-column1 {
-    float: left; 
-    width: 49%;
-    border-right: 2px solid white;
+.logo_htmlacademy {
+    display: inline-block;
+    background: url("../img/sprite.png") -140px -16px no-repeat;
+    width: 113px;
+    height: 39px;        
 }
 
-.price-controls-column2 {
-    float: right;   
-    width: 50%;
+.main__footer .logo_htmlacademy:hover{
+    background: url("../img/sprite.png") -140px -72px no-repeat;
+}
+
+.main__footer .logo_htmlacademy:active{
+    background: url("../img/sprite.png") -140px -128px no-repeat;
 }
