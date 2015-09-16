@@ -73,15 +73,16 @@
 body{
     font: normal 14px/1em 'PT Sans';
     color: #333;    
-    width:100%;
+    width:100%; 
     text-transform: uppercase;        
     overflow-y: scroll;
     background: #f2f2f2;
+    font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .page {
     max-width: 1200px;
-    min-width: 768px;
+    min-width: 748px;
     box-shadow: 1px 0 11px 2px #dbdbdb;
     background: #ffffff;
     margin: 0 auto;
@@ -264,8 +265,13 @@ h4 {
     height: 220px;
 }
 
-.layout-block .advantage__num{
-    margin-bottom: 18px;
+.main__other_advantages .advantage__num{
+    margin-bottom: 24px;
+}
+
+.main__advantage-1  .advantage__num,
+.main__advantage-2  .advantage__num{
+   margin-bottom: 18px; 
 }
 
 .main__services {
@@ -349,7 +355,8 @@ h4 {
 .main__advantage-2 .advantage__column-1 img
 {
     float: left;    
-    clear: both;    
+    clear: both;  
+    width:100%;
 }
 
 .other_advantage_column.layout-block h3 {
@@ -358,13 +365,23 @@ h4 {
     margin-bottom:21px;
 }
 
+.other_advantage_column.layout-block p{
+    font: normal 14px/21px 'PT Sans';
+    color: #333333;
+}
+
 
 
 /* оформляем часть главной страницы с формой */
 .main__map{
     background-image: url(../img/bg_map.jpg) 50% 50% no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow: hidden;    
+}
+
+.main__map iframe{
+    width: 100%;
+    height: 593px;
 }
 
 .main__search-hotel {
@@ -372,13 +389,13 @@ h4 {
 }
 
 /* Оформление формы */
-
+    
 .search-hotel__form {
     position: absolute;
     /* фиксированная ширина формы */
     width: 568px;
     height: 500px;
-    top:185px;
+    top:189px;
     left:50%;
     transform: translate(-50%,0);
     background: #fff;
@@ -450,9 +467,11 @@ h4 {
     color: #81b3d2; 
 }
 
-.people-quantity__controls input[type="button"]:focus{
-    outline-color: #e5e5e5;
+.people-quantity__controls input[type="button"]:focus,
+{
+    outline:1px solid #e5e5e5;
 }
+
 
 .people-age__value {
     border: none;
@@ -502,7 +521,7 @@ h4 {
 
 .search-hotel-layout .date:focus{
     background-color: #fff;     
-    outline-color: #e5e5e5;
+    outline:1px solid #e5e5e5;
 }
 
 .people-quantity__controls {
@@ -512,7 +531,7 @@ h4 {
 
 
 .people-quantity__controls::last-child{
-    margin:0 !important;
+    margin:0;
 }
 
 
@@ -600,19 +619,24 @@ h4 {
 }
 
 .copyright {  
-    padding: 40.6px 0;    
+    padding: 0 0;  
+    margin: 0;
     position: relative;
+    min-width: 195px;    
 }
 
-.copyright span{
-    position: absolute;
-    left:35%;
-    top:49%;
-    transform: translate(-50%, -50%);
+.copyright_layout{
+    max-width: 196px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
-.copyright a{
-    padding-left: 83px;
+.copyright_layout p{
+    float:left;
+}
+
+.copyright_layout .logo_htmlacademy{
+    margin-left:8px;
 }
 
 
@@ -637,18 +661,20 @@ h4 {
 .filter__housing-type {
     float: left;
     border: 0;  
-    padding: 0;    
+    padding: 0; 
+    
 }
 
 .filter__infrastructure{
     width: 15.5%;
+    min-width:180px;
     margin-right: 5%;
     padding-right: 1%;   
 }
 
 .filter__housing-type{
     width: 27.27%;
-    padding-left:2.4%;
+    padding-left:1%;
 }
 
 
@@ -823,7 +849,7 @@ h4 {
 }
 
 .range-controls .toggle-max {
-  left: 70%;
+  left: 79%;
 }
 
 
@@ -863,36 +889,49 @@ h4 {
 }
 
 .found-housing__row { 
-    display: table;    
+    display: table; 
+    position: relative;
+    width: 100%;
 }
 
 .found-housing__preview,
 .found-housing__details,
 .housing__item__rating{
    display : table-cell; 
-   vertical-align : middle;
-   text-align : left;    
-   padding: 30px 0;
+   vertical-align : middle;  
    border-top:  1px solid #e5e5e5;    
-   box-sizing: border-box;    
+   box-sizing: border-box;     
 }
 
+.main__found-housing .found-housing__row:last-child{
+   border-bottom:  1px solid #e5e5e5;  
+}
+
+
 .found-housing__preview{
-   width: 11%;        
-   padding-left:6%;   
+   width: 19.6%;        
+   padding-left:6%;
+   padding-right:2.3%;
+    min-width: 200px;
+}
+
+.found-housing__preview>a:hover{
+   border:0.01px solid transparent;
 }
 
 
 .found-housing__details{
-    width: 48.3%;   
-    padding-left: 1.8%;
-    padding-top: 18px;
+    width: 54.4%;       
+    padding: 23px 0 33px 0;        
 }
 
-
-.found-housing__details a{
-    margin:0;
+.housing__item__rating{   
+    text-align: right;  
+    width: 26%;
+    padding-right: 6%;
+    position: relative;    
 }
+
 
 
 .found-housing__details h3{
@@ -901,17 +940,19 @@ h4 {
     margin-bottom:10px;
 }
 
-.housing__item__rating{   
-    text-align: right;  
-    width: 26%;
-    position: relative;    
+.housing__item__type,
+.housing__item__cost
+{
+    font: normal 14px/14px 'PT Sans';        
+    color: #333333;
+    display: inline-block;    
+    vertical-align: top;
+    margin-bottom: 18px;    
 }
 
-
-.sort__cost--active a{
-    color: #81b3d2;
+.housing__item__cost {
+    margin-right:0;    
 }
-
 
 .view-control__sort{
     font: normal 12px/12px 'PT Sans';
@@ -971,6 +1012,7 @@ h4 {
     display: inline-block; 
     vertical-align: top;
     width: 100%;
+    margin-left: 0;
 }
 
 .layout-found-housing h3{
@@ -985,21 +1027,6 @@ h4 {
     color: black;
     opacity: 0.3;
 }
-
-.housing__item__type,
-.housing__item__cost
-{
-    font: normal 14px/14px 'PT Sans';        
-    color: #333333;
-    display: inline-block;    
-    vertical-align: top;
-    margin-bottom: 20px;    
-}
-
-.housing__item__cost {
-    margin-right:0;    
-}
-
 
 .housing__item__rules a{
     padding: 6.5px 17px;
@@ -1087,6 +1114,7 @@ h4 {
     font-size: 0;
     border: 2px solid white;
     text-align: center;
+    min-width: 202px;
     width: 100%;
     padding: 9px 0;
     margin-top: 14px;
@@ -1094,15 +1122,6 @@ h4 {
     font: normal 14px/14px 'PT Sans';
 }
 
-
-.price-controls td{
-    padding:8px 0;
-    width: 157.5px;
-}
-
-.price-controls td:first-child{
-    border-right: 2px solid white;
-}
 
 .price-controls input {
   font-family: 'Roboto', 'Arial', sans-serif;
