@@ -72,13 +72,12 @@
 .icon-youtube:before { content: '\f39e'; } /* '' */
 
 body{
-    font: normal 14px/1em 'PT Sans';
+    font: normal 14px/1em 'PT Sans','Arial', sans-serif;
     color: #333;    
     width:100%; 
     text-transform: uppercase;        
     overflow-y: scroll;
-    background: #f2f2f2;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    background: #f2f2f2;    
 }
 
 .page {
@@ -100,7 +99,7 @@ body{
 /* Заголовки */
 
 h1{
-    font:bold 21px/1.2em 'PT Sans';
+    font:bold 21px/1.2em 'PT Sans','Arial', sans-serif;
     color: #000;   
     text-transform: uppercase;  
     margin-bottom: 35px;
@@ -108,20 +107,20 @@ h1{
 
 
 h2{
-    font: normal 14px/1.0em 'PT Sans';
+    font: normal 14px/1.0em 'PT Sans','Arial', sans-serif;
     color: #333;        
     text-transform: uppercase;
     margin-bottom: 58px;
 }
 
 h3 {    
-    font: bold 21px/24px 'PT Sans';
+    font: bold 21px/24px 'PT Sans','Arial', sans-serif;
     text-align: center;    
 }
 
 
 h4 {    
-    font: normal 30px/1.0em 'PT Sans';
+    font: normal 30px/1.0em 'PT Sans','Arial', sans-serif;
     font-weight: bold;    
     text-align: center;
 }
@@ -142,26 +141,28 @@ h4 {
     padding: 0;
 }
 
-.header__navigation ul li{ /* список 1200-72*2 =  1056   */
+.header__navigation li{
     display: block;
-    font:bold 14px/1em 'PT Sans';  
+    font:bold 14px/1em 'PT Sans','Arial', sans-serif;  
     width: 20%;    
     padding:21px 0; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.header__navigation ul li:first-child,
-.header__navigation ul li:nth-child(2){
+.header__navigation li:first-child,
+.header__navigation li:nth-child(2){
     float:left;
     text-align: left;
-    margin-right:30px;      
+    margin-right:3%;      
 }
 
-.header__navigation ul li:nth-child(3),
-.header__navigation ul li:last-child{
+.header__navigation li:nth-child(3),
+.header__navigation li:last-child{
     float:right;
     text-align: right;
-    margin-left:30px;   
+    margin-left:3%   
 }
 
 .header__navigation a:hover{
@@ -186,15 +187,16 @@ h4 {
 .header__banner {
     background: url(../img/bg_image_mask.png) 50% 100% no-repeat,
                 url(../img/bg_header.jpg) 50% -83px  no-repeat;
-                height: 508px;
+    height: 508px;
     margin-bottom: 58px;
 }    
 
 .layout-banner {
     border-top:1px solid transparent;        
     padding-top:76px;
-    text-align: center;      
+    text-align: center;          
 }
+
 
 .layout-form{
     border-top:1px solid transparent;        
@@ -202,7 +204,7 @@ h4 {
     text-align: center; 
     width: 490px;
     margin: 0 auto;
-    font: normal 14px/24px 'PT Sans';
+    font: normal 14px/24px 'PT Sans','Arial', sans-serif;
     margin-bottom: 130px;
     word-wrap: break-word;
 }
@@ -263,7 +265,7 @@ h4 {
     width: 23.1%;    
     text-align: center;      
     padding:0 5.1%;
-    font: normal 14px/21px 'PT Sans';
+    font: normal 14px/21px 'PT Sans','Arial', sans-serif;
     position: relative;
     min-height: 220px;
 }
@@ -294,6 +296,11 @@ h4 {
     margin-right: 0;        
 }
 
+.main__services img{
+    max-width: 72px;
+    max-height: 76px;
+}
+
 
 /* блок преимущества */
 
@@ -316,19 +323,17 @@ h4 {
 
 .main__advantage-1 .advantage__column-1,
 .main__advantage-2 .advantage__column-1{
-    float: left;
+    float: left;    
 }
 
 .main__advantage-1 .advantage__column-2,
 .main__advantage-2 .advantage__column-2{
-    float: right;
-    width: 66.66%;
+    float: right;   
 }
 
 .main__advantage-1 .advantage__column-1, 
-.main__advantage-2 .advantage__column-2{
-    
-    width: 23.1%; 
+.main__advantage-2 .advantage__column-2{    
+    width: 23%; 
 }
 
 .main__advantage-1 .advantage__column-2,
@@ -349,6 +354,7 @@ h4 {
     width:100%;
 }
 
+
 /* блок остальные преимущества */
 .main__other_advantages{
     background-color: #eeeeee;  
@@ -367,14 +373,16 @@ h4 {
     margin-right:none;
 }
 
+
 .other_advantage_column.layout-block h3 {
-    padding: 0 21%;
+    font: bold 21px/26px 'PT Sans','Arial', sans-serif;
+    text-align: center;
     padding-top:23px;    
-    margin-bottom:21px;    
+    margin-bottom:21px;
 }
 
 .other_advantage_column.layout-block p{
-    font: normal 14px/21px 'PT Sans';
+    font: normal 14px/21px 'PT Sans','Arial', sans-serif;
     color: #333333;
 }
 
@@ -382,14 +390,13 @@ h4 {
 
 /* оформляем часть главной страницы с формой */
 .main__map{
-    background-image: url(../img/bg_map.jpg) 50% 50% no-repeat;
-    background-size: cover;
     overflow: hidden;    
 }
 
-.main__map iframe{
-    width: 100%;
-    height: 593px;
+.main__map>div{
+    display:inline-block;
+    width:1200px;
+    height:593px
 }
 
 .main__search-hotel {
@@ -407,8 +414,9 @@ h4 {
     left:50%;
     transform: translate(-50%,0);
     background: #fff;
-    font: bold 14px/1em 'PT Sans';
+    font: bold 14px/1em 'PT Sans','Arial', sans-serif;
     word-wrap: break-word;
+    z-index: 2;
     
 }
 
@@ -424,7 +432,7 @@ h4 {
 }
 
 .search-hotel-layout input[type="submit"]{
-    font: bold 21px/1em 'PT Sans';
+    font: bold 21px/1em 'PT Sans','Arial', sans-serif;
     padding: 18px 0;
     text-align: center;
     color: white;
@@ -486,7 +494,7 @@ h4 {
     border: none;
     background-color: #f2f2f2;    
     text-transform: uppercase;
-    font: bold 14px/26px 'PT Sans'; 
+    font: bold 14px/26px 'PT Sans','Arial', sans-serif; 
     text-align: left;
     padding: 4px 13px;
     width: 10px;    
@@ -513,7 +521,7 @@ h4 {
 .search-hotel-layout .date{    
     width: 313px;
     border: none;    
-    font: bold 14px/26px 'PT Sans';  
+    font: bold 14px/26px 'PT Sans','Arial', sans-serif;  
     text-align: left;
     padding: 6px 15px;
     text-transform: uppercase;
@@ -570,7 +578,7 @@ h4 {
 .layout-footer>div{        
     display: inline-block;
     vertical-align: top; 
-    width: 33%;    
+    width: 32.9%;    
     text-align: center;
 }
 
@@ -604,9 +612,11 @@ h4 {
     height: 48px;    
     outline: inline 3px 0 0 5px red; /* #8ab8d5; */
     background-color: #81b3d2;    
-    color: white;
-    box-sizing: border-box;
+    color: white;    
     padding:14.5px 0;    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 .main-footer__social i:hover{
@@ -656,10 +666,10 @@ h4 {
  Форма с контроллерами  */
 
 .header__form {
-    background: url(../img/bg_header_catalog.jpg) 0 -294px no-repeat;
+    background: #5b748a url(../img/bg_header_catalog.jpg) 0 -294px no-repeat;
     border-top: 1px solid transparent;
     color: white;
-    font: normal 14px/1.0em 'PT Sans'; 
+    font: normal 14px/1.0em 'PT Sans','Arial', sans-serif; 
     min-height: 217px;   
     word-wrap: break-word;
 }
@@ -694,7 +704,7 @@ h4 {
 
 .filter__infrastructure legend,
 .filter__housing-type legend {        
-    font: bold 16px/18px  'PT Sans';
+    font: bold 16px/18px  'PT Sans','Arial', sans-serif;
     margin-bottom:30px;
     text-align: left;
     word-wrap: break-word;
@@ -709,7 +719,7 @@ h4 {
 }
 
 .layout-control input[type="checkbox"]+label{
-    font: normal 14px/14px 'PT Sans';
+    font: normal 14px/14px 'PT Sans','Arial', sans-serif;
     margin-bottom: 10px;
     display: block;
     position: relative;    
@@ -761,12 +771,12 @@ h4 {
     text-decoration: none;
 }
 
-.main__view-control a:actived{
+.main__view-control a:active{
     color: #81b3d2;
 }
 
 .view-control__found {
-   font: bold 21px/24px 'PT Sans';  
+   font: bold 21px/24px 'PT Sans','Arial', sans-serif;  
     margin-right:45px;    
     float: left;
 }
@@ -799,7 +809,7 @@ h4 {
 .header__form .cost {
     float: right;   
     text-align: left;
-    font: normal 16px/18px 'PT Sans';
+    font: normal 16px/18px 'PT Sans','Arial', sans-serif;
     position: relative;
     width: 30%;
     word-wrap: break-word;
@@ -809,9 +819,11 @@ h4 {
     width:136px;
     padding: 3px 0;
     border: 2px solid white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;    
     border-radius: 2px;
     text-transform: uppercase;
-    font: normal 14px/24px 'PT Sans';
+    font: normal 14px/24px 'PT Sans','Arial', sans-serif;
     background: none;  
     display: block;
     margin: 0 auto;
@@ -855,6 +867,8 @@ h4 {
   height: 4px;
   cursor: pointer;
   border: 8px solid #fff;
+  -webkit-border-radius: 50%;    
+  -moz-border-radius: 50%;            
   border-radius: 50%;
   background: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -919,8 +933,11 @@ h4 {
 .housing__item__rating{
    display : table-cell; 
    vertical-align : middle;  
-   border-top:  1px solid #e5e5e5;    
-   box-sizing: border-box;     
+   border-top:  1px solid #e5e5e5; 
+   word-wrap: break-word;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+   box-sizing: border-box;      
 }
 
 .main__found-housing .found-housing__row:last-child{
@@ -962,11 +979,12 @@ h4 {
 .housing__item__type,
 .housing__item__cost
 {
-    font: normal 14px/14px 'PT Sans';        
+    font: normal 14px/14px 'PT Sans','Arial', sans-serif;        
     color: #333333;
     display: inline-block;    
     vertical-align: top;
-    margin-bottom: 18px;    
+    margin-bottom: 18px;   
+    max-width: 143px;
 }
 
 .housing__item__cost {
@@ -974,7 +992,7 @@ h4 {
 }
 
 .view-control__sort{
-    font: normal 12px/12px 'PT Sans';
+    font: normal 12px/12px 'PT Sans','Arial', sans-serif;
     float: left;
     padding: 3px 0;
 }
@@ -1003,24 +1021,24 @@ h4 {
     margin-right: 31px;
 }
 
-.view-control__sort .sort__type a,
-.view-control__sort .sort__rating a,
-.view-control__sort .sort__cost a
+.sort__type a,
+.sort__rating a,
+.sort__cost a
 {
     border-bottom: 1px dotted #81b3d2;
     padding:2px 0; 
     color: rgba(0,0,0,0.3);
 }
 
-.view-control__sort .sort__type a:hover,
-.view-control__sort .sort__rating a:hover,
-.view-control__sort .sort__cost a:hover{
+.sort__type a:hover,
+.sort__rating a:hover,
+.sort__cost a:hover{
     color: #81b3d2;
 }
 
-.view-control__sort .sort__type a:active,
-.view-control__sort .sort__rating a:active,
-.view-control__sort .sort__cost a:active{
+.sort__type a:active,
+.sort__rating a:active,
+.sort__cost a:active{
     color: black;
     border:none;
     opacity: 1;
@@ -1036,7 +1054,7 @@ h4 {
 }
 
 .layout-found-housing h3{
-    color: black;
+    color: black;    
 }
 
 .layout-found-housing h3:hover{
@@ -1115,7 +1133,7 @@ h4 {
     position: absolute;
     top:30px;
     right:23%;
-    font: normal 19px/21px 'PT Sans';
+    font: normal 19px/21px 'PT Sans','Arial', sans-serif;
     color: #81b3d2;
     marging-bottom: 47px;
     font: normal 19px/21px 'symbols-sedona';    
@@ -1125,7 +1143,7 @@ h4 {
     position: absolute;
     bottom:30px;
     right:23%;  
-    font: normal 14px/14px 'PT Sans';
+    font: normal 14px/14px 'PT Sans','Arial', sans-serif;
     color: #666666;
     padding: 6.5px 17px;
     background: #f2f2f2;
@@ -1142,7 +1160,7 @@ h4 {
     padding: 9px 0;
     margin-top: 14px;
     margin-bottom: 10px;    
-    font: normal 14px/14px 'PT Sans';
+    font: normal 14px/14px 'PT Sans','Arial', sans-serif;
 }
 
 
@@ -1155,6 +1173,8 @@ h4 {
   text-align: center;
   color: #283136;
   border: none;
+  -webkit-border-radius: 5px;    
+  -moz-border-radius: 5px;        
   border-radius: 5px;
   outline: none;
   background: #f1f1f1;
@@ -1162,6 +1182,23 @@ h4 {
 
 .catalog-layout {
     padding: 0;
+}
+
+
+.logo_htmlacademy {
+    display: inline-block;
+    vertical-align: baseline;
+    background: url("../img/sprite.png") -140px -16px no-repeat;
+    width: 113px;
+    height: 39px;        
+}
+
+.main__footer .logo_htmlacademy:hover{
+    background: url("../img/sprite.png") -140px -72px no-repeat;
+}
+
+.main__footer .logo_htmlacademy:active{
+    background: url("../img/sprite.png") -140px -128px no-repeat;
 }
 
 /* визуальные отображения объектов */
@@ -1193,21 +1230,4 @@ h4 {
 
 .l6{
   outline: 2px dashed #0ef455;  
-}
-
-
-.logo_htmlacademy {
-    display: inline-block;
-    vertical-align: baseline;
-    background: url("../img/sprite.png") -140px -16px no-repeat;
-    width: 113px;
-    height: 39px;        
-}
-
-.main__footer .logo_htmlacademy:hover{
-    background: url("../img/sprite.png") -140px -72px no-repeat;
-}
-
-.main__footer .logo_htmlacademy:active{
-    background: url("../img/sprite.png") -140px -128px no-repeat;
 }
