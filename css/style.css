@@ -29,8 +29,8 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "symbols-sedona";
+ [class^='icon-']:before, [class*=' icon-']:before {
+  font-family: 'symbols-sedona';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -82,7 +82,7 @@ body{
 
 .page {
     max-width: 1200px;
-    min-width: 748px;
+    min-width: 740px;
     box-shadow: 1px 0 11px 2px #dbdbdb;
     background: #ffffff;
     margin: 0 auto;
@@ -205,7 +205,7 @@ h4 {
     width: 490px;
     margin: 0 auto;
     font: normal 14px/24px 'PT Sans','Arial', sans-serif;
-    margin-bottom: 130px;
+    margin-bottom: 48px;
     word-wrap: break-word;
 }
 
@@ -341,13 +341,13 @@ h4 {
     width: 66.66%;        
 }
 
-.advantage__column-1.layout-block h3,
-.advantage__column-2.layout-block h3{
+.advantage__column-1 h3,
+.advantage__column-2 h3{
     margin-bottom: 26px;    
 }
 
-.main__advantage-1 .advantage__column-2 img,
-.main__advantage-2 .advantage__column-1 img
+.main__advantage-1 img,
+.main__advantage-2 img
 {
     float: left;    
     clear: both;  
@@ -374,14 +374,14 @@ h4 {
 }
 
 
-.other_advantage_column.layout-block h3 {
+.other_advantage_column h3 {
     font: bold 21px/26px 'PT Sans','Arial', sans-serif;
     text-align: center;
     padding-top:23px;    
     margin-bottom:21px;
 }
 
-.other_advantage_column.layout-block p{
+.other_advantage_column p{
     font: normal 14px/21px 'PT Sans','Arial', sans-serif;
     color: #333333;
 }
@@ -389,14 +389,18 @@ h4 {
 
 
 /* оформляем часть главной страницы с формой */
-.main__map{
-    overflow: hidden;    
+.main__map{  
+    background: #d8e3bf url(../img/bg_map.jpg) 50% 50% no-repeat;
+    background-size: cover;  
+    overflow: hidden;  
 }
 
 .main__map>div{
     display:inline-block;
     width:1200px;
-    height:593px
+    height:593px;
+        
+        
 }
 
 .main__search-hotel {
@@ -406,32 +410,55 @@ h4 {
 /* Оформление формы */
     
 .search-hotel__form {
+    width: 568px;  
+    margin: 0 auto;
+}
+
+.search-hotel__btn{    
+    background: #766357;
+    padding: 32px 0;
+    font: bold 21px/24px 'PT Sans','Arial', sans-serif;
+    text-align: center;     
+}
+
+.search-hotel__btn:hover{
+    cursor: pointer;
+}
+
+.search-hotel__form a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.search-hotel-hidden{
+    display: none;
     position: absolute;
     /* фиксированная ширина формы */
     width: 568px;
-    height: 500px;
-    top:189px;
+    height: 395px;
+    top:300px;
     left:50%;
     transform: translate(-50%,0);
     background: #fff;
     font: bold 14px/1em 'PT Sans','Arial', sans-serif;
     word-wrap: break-word;
-    z-index: 2;
-    
+    z-index: 2;      
 }
 
-.search-hotel__form h3{    
-    background: #766357;
-    color: white;
-    padding: 32px 0;
+.search-hotel-show {
+    display: block;
+    animation: bounce 1.0s;
 }
 
-.search-hotel-layout {
-    margin: 52px 55px;  
-    position: relative;
+@keyframes bounce {
+    0% {transform: translate(-50%,-1200px);}
+    50% {transform: translate(-50%,300px);}
+    80% {transform: translate(-50%,-10px);}
+   100% {transform: translate(-50%,0);}
 }
 
-.search-hotel-layout input[type="submit"]{
+.search-hotel-layout input[type='submit']{
     font: bold 21px/1em 'PT Sans','Arial', sans-serif;
     padding: 18px 0;
     text-align: center;
@@ -442,11 +469,11 @@ h4 {
     border: 0;
 }
 
-.search-hotel-layout input[type="submit"]:hover{
+.search-hotel-layout input[type='submit']:hover{
     background-color: #669ec0;
 }
 
-.search-hotel-layout input[type="submit"]:active{
+.search-hotel-layout input[type='submit']:active{
     background-color: #5496bd;
     color: rgba(255,255,255,0.3);
     
@@ -469,22 +496,22 @@ h4 {
     width: 114px;
 }
 
-.people-quantity__controls input[type="button"]{
+.people-quantity__controls input[type='button']{
     border:0;       
     background-color: #f2f2f2; 
     padding: 8px 13px;
     color: #a9a9a9;    
 }
 
-.people-quantity__controls input[type="button"]:hover{
+.people-quantity__controls input[type='button']:hover{
     color: black;
 }
 
-.people-quantity__controls input[type="button"]:active{
+.people-quantity__controls input[type='button']:active{
     color: #81b3d2; 
 }
 
-.people-quantity__controls input[type="button"]:focus,
+.people-quantity__controls input[type='button']:focus,
 {
     outline:1px solid #e5e5e5;
 }
@@ -534,7 +561,7 @@ h4 {
 }
 
 .search-hotel-layout .date:active{
-    background: #ebebeb url('../img/sprite.png') 242px -122px no-repeat;;      
+    background: #ebebeb url('../img/sprite.png') 242px -122px no-repeat;      
 }
 
 
@@ -714,11 +741,11 @@ h4 {
 
 /* обрабаытваем чекбоксы */
 
-.layout-control input[type="checkbox"]{
+.layout-control input[type='checkbox']{
     display:none;    
 }
 
-.layout-control input[type="checkbox"]+label{
+.layout-control input[type='checkbox']+label{
     font: normal 14px/14px 'PT Sans','Arial', sans-serif;
     margin-bottom: 10px;
     display: block;
@@ -726,11 +753,11 @@ h4 {
     color: #b5b5b5;    
 }
 
-.layout-control input[type="checkbox"]+label:hover{
+.layout-control input[type='checkbox']+label:hover{
     color: #fff;
 }
 
-.layout-control input[type="checkbox"]+label:before{
+.layout-control input[type='checkbox']+label:before{
     display: inline-block;
     content: '';
     width: 26px;
@@ -740,16 +767,16 @@ h4 {
     background: url('../img/sprite.png') -72px -271px no-repeat;     
 }
 
-.layout-control input[type="checkbox"]:checked+label:before{    
+.layout-control input[type='checkbox']:checked+label:before{    
    background: url('../img/sprite.png') -72px -241px no-repeat;   
 }
 
 
-.layout-control input[type="checkbox"]+label:hover:before{    
+.layout-control input[type='checkbox']+label:hover:before{    
     background: url('../img/sprite.png') -72px -204px no-repeat;   
 }
 
-.layout-control input[type="checkbox"]:checked+label:hover:before{
+.layout-control input[type='checkbox']:checked+label:hover:before{
     background: url('../img/sprite.png') -72px -172px no-repeat;
 }
 
@@ -801,10 +828,7 @@ h4 {
 }
 
 
-
-
 /* ----------  */
-
 
 .header__form .cost {
     float: right;   
@@ -815,7 +839,7 @@ h4 {
     word-wrap: break-word;
 }
 
-.cost input[type="submit"]{
+.cost input[type='submit']{
     width:136px;
     padding: 3px 0;
     border: 2px solid white;
@@ -923,21 +947,30 @@ h4 {
 }
 
 .found-housing__row { 
-    display: table; 
+    /* display: table;  */
     position: relative;
     width: 100%;
+   border-top:  1px solid #e5e5e5;     
 }
 
 .found-housing__preview,
 .found-housing__details,
 .housing__item__rating{
-   display : table-cell; 
-   vertical-align : middle;  
-   border-top:  1px solid #e5e5e5; 
+   padding: 28px 0;
    word-wrap: break-word;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
    box-sizing: border-box;      
+}
+
+.found-housing__preview,
+.found-housing__details{
+    float:left;
+
+}
+
+.housing__item__rating{
+    float: right;
 }
 
 .main__found-housing .found-housing__row:last-child{
@@ -946,10 +979,10 @@ h4 {
 
 
 .found-housing__preview{
-   width: 19.6%;        
+   width: 19.6%; 
    padding-left:6%;
-   padding-right:2.3%;
-    min-width: 200px;
+   margin-right:7px;
+   min-width: 200px;
 }
 
 .found-housing__preview>a:hover{
@@ -959,7 +992,7 @@ h4 {
 
 .found-housing__details{
     width: 54.4%; 
-    max-width: 700px;
+    max-width: 290px;
     padding: 23px 0 33px 0;        
 }
 
@@ -1130,24 +1163,17 @@ h4 {
 
 
 .housing__item__rating .rating__stars {
-    position: absolute;
-    top:30px;
-    right:23%;
-    font: normal 19px/21px 'PT Sans','Arial', sans-serif;
-    color: #81b3d2;
-    marging-bottom: 47px;
     font: normal 19px/21px 'symbols-sedona';    
+    color: #81b3d2;
+    margin-bottom: 40px;    
 }
 
-.housing__item__rating .rating__value {
-    position: absolute;
-    bottom:30px;
-    right:23%;  
+.housing__item__rating .rating__value {    
     font: normal 14px/14px 'PT Sans','Arial', sans-serif;
     color: #666666;
     padding: 6.5px 17px;
-    background: #f2f2f2;
-    
+    background: #f2f2f2;    
+    float: right;    
 }
 
 
@@ -1188,17 +1214,17 @@ h4 {
 .logo_htmlacademy {
     display: inline-block;
     vertical-align: baseline;
-    background: url("../img/sprite.png") -140px -16px no-repeat;
+    background: url('../img/sprite.png') -140px -16px no-repeat;
     width: 113px;
     height: 39px;        
 }
 
 .main__footer .logo_htmlacademy:hover{
-    background: url("../img/sprite.png") -140px -72px no-repeat;
+    background: url('../img/sprite.png') -140px -72px no-repeat;
 }
 
 .main__footer .logo_htmlacademy:active{
-    background: url("../img/sprite.png") -140px -128px no-repeat;
+    background: url('../img/sprite.png') -140px -128px no-repeat;
 }
 
 /* визуальные отображения объектов */
@@ -1231,3 +1257,9 @@ h4 {
 .l6{
   outline: 2px dashed #0ef455;  
 }
+.search-hotel-layout {
+    margin: 52px 55px;  
+    position: relative;
+}
+
+

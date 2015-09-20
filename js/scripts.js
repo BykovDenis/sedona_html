@@ -1,23 +1,33 @@
+// отображение формы
+
+var link = document.querySelector('.search-hotel__btn');
+var popup = document.querySelector('.search-hotel-hidden');
+link = link.addEventListener('click', function (event) {
+    event.preventDefault();
+    popup.classList.add('search-hotel-show');
+});
+
+
 // cобытия на форме
 
-var form = document.querySelector("form");
-var date_in = document.querySelector("#date_in");            
-var date_out = document.querySelector("#date_out");            
-var cnt_adult = document.querySelector("#people-adult");
-var cnt_children = document.querySelector("#people-children");
+var form = document.querySelector('form');
+var date_in = document.querySelector('#date_in');            
+var date_out = document.querySelector('#date_out');            
+var cnt_adult = document.querySelector('#people-adult');
+var cnt_children = document.querySelector('#people-children');
 
-form.addEventListener("submit", function(event){                
+form.addEventListener('submit', function(event){                
     event.preventDefault();
   /*  
-    console.log("Входные данные для поиска жилья в Седоне");
-    console.log("Дата заезда:"+date_in.value);
-    console.log("Дата выезда:"+date_out.value);
-    console.log("Количество взрослых:"+cnt_adult.value);
-    console.log("Количество детей:"+cnt_children.value);                               
+    console.log('Входные данные для поиска жилья в Седоне');
+    console.log('Дата заезда:'+date_in.value);
+    console.log('Дата выезда:'+date_out.value);
+    console.log('Количество взрослых:'+cnt_adult.value);
+    console.log('Количество детей:'+cnt_children.value);                               
    */    
 }); 
 
-// Отрисовка карты
+// Отрисовка карты  
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {

@@ -112,37 +112,39 @@
                        <div class="search-hotel__form">
                        <!-- форма поиска отелей -->
                            <form action="index.html">                              
-                                <h3>Поиск гостиницы в Седоне</h3>
-                                <div class="search-hotel-layout">
-                                   <label for="date_in">Дата заезда:</label>
-                                   <input class="date" type="text" id="date_in" value="24 апреля 2014"><br>
-                                   <label for="date_out">Дата выезда:</label>
-                                   <input class="date" type="text" id="date_out" value="4 июля 2014"><br>
-                                   <!-- определяем количество людей -->
-                                   <div class="search-hotel__people-quantity clearfix">
-                                      <div class="people-quantity__adult people-age">
-                                           <label for="people-adult">Взрослые:</label>
-                                           <span class="people-quantity__controls">
-                                               <input type="button" value="-">
-                                               <input type="text" id="people-adult" class="people-age__value" value="2">
-                                               <input type="button" value="+">
-                                           </span>                                     
+                               <div class="search-hotel__btn"><a href="#">Поиск гостиницы в Седоне</a></div>
+                                <div class="search-hotel-hidden">
+                                    <div class="search-hotel-layout">
+                                       <label for="date_in">Дата заезда:</label>
+                                       <input class="date" type="text" id="date_in" value="24 апреля 2014"><br>
+                                       <label for="date_out">Дата выезда:</label>
+                                       <input class="date" type="text" id="date_out" value="4 июля 2014"><br>
+                                       <!-- определяем количество людей -->
+                                       <div class="search-hotel__people-quantity clearfix">
+                                          <div class="people-quantity__adult people-age">
+                                               <label for="people-adult">Взрослые:</label>
+                                               <span class="people-quantity__controls">
+                                                   <input type="button" value="-">
+                                                   <input type="text" id="people-adult" class="people-age__value" value="2">
+                                                   <input type="button" value="+">
+                                               </span>                                     
+                                           </div>
+                                           <div class="people-quantity__child people-age">
+                                                <label for="people-children">Дети:</label>
+                                                <span class="people-quantity__controls">
+                                                   <input type="button" value="-">
+                                                   <input type="text" id="people-children" class="people-age__value" value="0">
+                                                   <input type="button" value="+">
+                                                </span>
+                                           </div>                                      
                                        </div>
-                                       <div class="people-quantity__child people-age">
-                                            <label for="people-children">Дети:</label>
-                                            <span class="people-quantity__controls">
-                                               <input type="button" value="-">
-                                               <input type="text" id="people-children" class="people-age__value" value="0">
-                                               <input type="button" value="+">
-                                            </span>
-                                       </div>                                      
-                                   </div>
-                                   <input type="submit" value="Найти">
+                                       <input type="submit" value="Найти">
+                                    </div>
                                </div>
                            </form>  
                        </div>                     
                         <div class="main__map">
-                            <div id="map" width="1200" height="593"></div>      
+                            <div class="main__map-preview" id="map"></div>      
                         </div>                                          
                    </section>    
             </main> 
@@ -165,8 +167,8 @@
             </div>
         </footer>                 
         </div> 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjyr7w5tXCAn5-3sETmXNDymaDIsy0N8&callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgjyr7w5tXCAn5-3sETmXNDymaDIsy0N8&amp;callback=initMap"
         async defer></script>         
-        <script type="text/javascript" src="js/scripts.min.js"></script>               
+        <script type="text/javascript" src="js/scripts.min.js"></script>       
     </body>
 </html>
