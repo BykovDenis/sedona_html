@@ -764,20 +764,20 @@ h4 {
     height: 22px;
     vertical-align: middle;
     margin-right: 15px;     
-    background: url('../img/sprite.png') -72px -271px no-repeat;     
+    background: url('../img/sprite.png') -72px -270px no-repeat;     
 }
 
 .layout-control input[type='checkbox']:checked+label:before{    
-   background: url('../img/sprite.png') -72px -241px no-repeat;   
+   background: url('../img/sprite.png') -72px -242px no-repeat;   
 }
 
 
 .layout-control input[type='checkbox']+label:hover:before{    
-    background: url('../img/sprite.png') -72px -204px no-repeat;   
+    background: url('../img/sprite.png') -72px -203px no-repeat;   
 }
 
 .layout-control input[type='checkbox']:checked+label:hover:before{
-    background: url('../img/sprite.png') -72px -172px no-repeat;
+    background: url('../img/sprite.png') -72px -171px no-repeat;
 }
 
 /* -------------------- */
